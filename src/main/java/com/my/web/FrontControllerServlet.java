@@ -1,8 +1,9 @@
 package com.my.web;
 
-
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "FrontControllerServlet", value = "/")
 public class FrontControllerServlet extends HttpServlet {
