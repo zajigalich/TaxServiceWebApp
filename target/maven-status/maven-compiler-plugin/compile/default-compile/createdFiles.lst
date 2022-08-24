@@ -1,0 +1,14 @@
+com\my\persistence\dao\UserDAO.class
+com\my\persistence\dao\impl\UserDAOImpl.class
+com\my\persistence\entity\TaxPeriod.class
+com\my\persistence\dao\ReportDAO.class
+com\my\persistence\entity\UserRole.class
+com\my\persistence\dao\BaseDAO.class
+com\my\persistence\entity\Report.class
+com\my\persistence\dao\DAOFactory.class
+com\my\persistence\entity\Status.class
+com\my\persistence\entity\User.class
+com\my\persistence\entity\BaseEntity.class
+com\my\persistence\dao\impl\ReportDAOImpl.class
+com\my\persistence\entity\EntrepreneurType.class
+com\my\web\FrontControllerServlet.class

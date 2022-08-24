@@ -1,0 +1,14 @@
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\dao\BaseDAO.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\dao\UserDAO.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\EntrepreneurType.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\dao\impl\UserDAOImpl.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\Report.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\BaseEntity.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\dao\impl\ReportDAOImpl.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\User.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\TaxPeriod.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\UserRole.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\web\FrontControllerServlet.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\entity\Status.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\dao\ReportDAO.java
+C:\Users\Konstantin\IdeaProjects\TaxServiceWeb\src\main\java\com\my\persistence\dao\DAOFactory.java

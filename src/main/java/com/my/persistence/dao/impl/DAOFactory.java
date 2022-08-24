@@ -1,7 +1,7 @@
-package com.my.persistence.dao;
+package com.my.persistence.dao.impl;
 
-import com.my.persistence.dao.impl.ReportDAOImpl;
-import com.my.persistence.dao.impl.UserDAOImpl;
+import com.my.persistence.dao.ReportDAO;
+import com.my.persistence.dao.UserDAO;
 
 public class DAOFactory {
     private static ReportDAO reportDAO;

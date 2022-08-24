@@ -1,5 +1,8 @@
 package com.my.persistence.entity;
 
 public enum UserRole {
-    USER, INSPECTOR;
+    USER("User"), INSPECTOR("Inspector");
+
+    UserRole(String role) {
+    }
 }
