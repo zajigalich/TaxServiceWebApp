@@ -1,10 +1,9 @@
 package com.my.web.controller.command;
 
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 
-import java.sql.SQLException;
-
+@FunctionalInterface
 public interface Command {
-    String execute(HttpServletRequest request) throws SQLException, ClassNotFoundException;
+    String execute(HttpServletRequest request);
 
 }

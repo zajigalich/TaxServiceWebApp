@@ -1,57 +1,92 @@
 package com.my.web.controller;
 
-import com.my.persistence.entity.User;
-import com.my.web.controller.command.Command;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import com.my.web.controller.command.*;
+import com.my.web.controller.command.app.LoginCommand;
+import com.my.web.controller.command.app.MainCommand;
+import com.my.web.controller.command.app.RegistrationCommand;
+import com.my.web.controller.command.inspector.InspectorReportsCommand;
+import com.my.web.controller.command.user.UserReportsCommand;
+import org.apache.log4j.Logger;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 
-@WebServlet(name = "FrontControllerServlet", value = "/")
+
+/**
+ * The main servlet for processing requests, actions and displaying pages
+ */
+@WebServlet(value = "/", name = "FrontControllerServlet")
 public class FrontControllerServlet extends HttpServlet {
 
     private final Map<String, Command> commands = new HashMap<>();
 
-    public void init() {
+    private static final Logger log = Logger.getLogger(FrontControllerServlet.class);
+
+    /**
+     * Holder for all commands
+     */
+    @Override
+    public void init(ServletConfig config) {
+        config.getServletContext()
+                .setAttribute("loggedUsers", new HashSet<String>());
+
+        commands.put("", new MainCommand());
+        commands.put("registration", new RegistrationCommand());
+        commands.put("login", new LoginCommand());
+        //commands.put("logout", new LogoutCommand());
+
+        commands.put("user/reports", new UserReportsCommand());
+
+        commands.put("inspector/reports", new InspectorReportsCommand());
 
     }
 
-    public void doGet(HttpServletRequest request,
-                      HttpServletResponse response)
-            throws IOException, ServletException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        processRequest(req, resp);
+
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws IOException, ServletException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException | ClassNotFoundException e) {
-            e.printStackTrace();
-        }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        processRequest(req, resp);
     }
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException, ClassNotFoundException {
-        String path = request.getRequestURI();
-        path = path.replaceAll(".*/", "");
-        Command command = commands.getOrDefault(path,
-                (r) -> "/index.jsp");
-        String page = command.execute(request);
-        if (page.contains("redirect:") || page.contains("logout")) {
+            throws ServletException, IOException {
+
+        String path = request.getRequestURI()
+                .replaceFirst("/WEB-INF", "")
+                .replaceFirst("/", "");
+
+        //String path=request.getRequestURI();
+        //path=path.replaceAll(".*/", "");
+
+        Command command = commands.getOrDefault(path.trim(), (c) -> "/WEB-INF/error/error404");
+        log.debug("Command: " + command.toString());
+        String page = "/WEB-INF/error/error500";
+
+        try {
+
+            page = command.execute(request);
+            log.info("Page after executing command  " + page);
+        } catch (Exception exception) {
+            log.error("Exception " + exception.getMessage());
+            request.setAttribute("exception", exception.getMessage());
+        }
+
+        if (page.contains("redirect:")) {
             response.sendRedirect(page.replace("redirect:", ""));
         } else {
-            request.getRequestDispatcher(page).forward(request, response);
+            request.getRequestDispatcher(page + ".jsp").forward(request, response);
         }
     }
 }

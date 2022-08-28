@@ -23,8 +23,6 @@ public class Report extends AbstractBaseEntity {
 
     private String comment;
 
-    //private User user;
-
     public static Builder builder() {
         return new Report.Builder();
     }
@@ -37,59 +35,54 @@ public class Report extends AbstractBaseEntity {
 
         @Override
         public Builder id(Long id) {
-            this.entity.id = id;
+            this.entity.setId(id);
             return this;
         }
 
         public Builder taxPeriod(TaxPeriod taxPeriod) {
-            this.entity.taxPeriod = taxPeriod;
+            this.entity.setTaxPeriod(taxPeriod);
             return this;
         }
 
         public Builder year(Integer year) {
-            this.entity.year = year;
+            this.entity.setYear(year);
             return this;
         }
 
         public Builder income(Integer income) {
-            this.entity.income = income;
+            this.entity.setIncome(income);
             return this;
         }
 
         public Builder taxRate(Integer taxRate) {
-            this.entity.taxRate = taxRate;
+            this.entity.setTaxRate(taxRate);
             return this;
         }
 
         public Builder reportDate(Date reportDate) {
-            this.entity.reportDate = reportDate;
+            this.entity.setReportDate(reportDate);
             return this;
         }
 
         public Builder lastChangeDate(Date lastChangeDate) {
-            this.entity.lastChangeDate = lastChangeDate;
+            this.entity.setLastChangeDate(lastChangeDate);
             return this;
         }
 
         public Builder status(ReportStatus status) {
-            this.entity.status = status;
+            this.entity.setStatus(status);
             return this;
         }
 
         public Builder comment(String comment) {
-            this.entity.comment = comment;
+            this.entity.setComment(comment);
             return this;
         }
 
         public Builder userId(Long userId) {
-            this.entity.userId = userId;
+            this.entity.setUserId(userId);
             return this;
         }
-
-        /*public Builder user(User user) {
-            this.report.user = user;
-            return this;
-        }*/
 
         public Report build() {
             return this.entity;
@@ -168,6 +161,7 @@ public class Report extends AbstractBaseEntity {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
 
     @Override
     public boolean equals(Object o) {

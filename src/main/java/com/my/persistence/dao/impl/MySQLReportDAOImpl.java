@@ -1,6 +1,6 @@
 package com.my.persistence.dao.impl;
 
-import com.my.persistence.dao.ManagerDB;
+import com.my.persistence.db.ManagerDB;
 import com.my.persistence.dao.ReportDAO;
 import com.my.persistence.dao.mapper.ObjectMapper;
 import com.my.persistence.dao.mapper.impl.ReportMapperImpl;
@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-public class ReportDAOImpl implements ReportDAO {
+public class MySQLReportDAOImpl implements ReportDAO {
 
     private final static String SAVE_REPORT = "INSERT INTO " +
             "report (comment, income, status_id, report_date, period_id, tax_rate, year, user_id) " +
@@ -28,7 +28,7 @@ public class ReportDAOImpl implements ReportDAO {
 
     ObjectMapper<Report> mapper = new ReportMapperImpl();
 
-    ReportDAOImpl() {
+    MySQLReportDAOImpl() {
     }
 
     @Override
@@ -42,24 +42,27 @@ public class ReportDAOImpl implements ReportDAO {
     }
 
     private Report setValuesCreateUpdate(Report report, String updateReport) {
-        try (Connection connection = ManagerDB.getInstance().getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(updateReport)) {
-            int k = 0;
-            preparedStatement.setString(++k, report.getComment());
-            preparedStatement.setInt(++k, report.getIncome());
-            preparedStatement.setInt(++k, report.getStatus().ordinal());
-            preparedStatement.setDate(++k, report.getReportDate());
-            preparedStatement.setInt(++k, report.getTaxPeriod().ordinal());
-            preparedStatement.setInt(++k, report.getTaxRate());
-            preparedStatement.setInt(++k, report.getYear());
-            preparedStatement.setLong(++k, report.getUserId());
+        try (Connection con = ManagerDB.getInstance().getConnection()) {
+            try (PreparedStatement preparedStatement = con.prepareStatement(updateReport)) {
+                int k = 0;
+                preparedStatement.setString(++k, report.getComment());
+                preparedStatement.setInt(++k, report.getIncome());
+                preparedStatement.setInt(++k, report.getStatus().ordinal());
+                preparedStatement.setDate(++k, report.getReportDate());
+                preparedStatement.setInt(++k, report.getTaxPeriod().ordinal());
+                preparedStatement.setInt(++k, report.getTaxRate());
+                preparedStatement.setInt(++k, report.getYear());
+                preparedStatement.setLong(++k, report.getUserId());
 
-            preparedStatement.execute();
-
+                preparedStatement.execute();
+                con.commit();
+            } catch (SQLException ex) {
+                con.rollback();
+                ex.printStackTrace();
+            }
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-
         return report;
     }
 
@@ -69,7 +72,7 @@ public class ReportDAOImpl implements ReportDAO {
     }
 
     @Override
-    public Optional<Report> findById(Integer id) {
+    public Optional<Report> findById(Long id) {
         return Optional.empty();
     }
 

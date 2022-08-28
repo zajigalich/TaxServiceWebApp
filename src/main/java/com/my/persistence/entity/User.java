@@ -35,53 +35,52 @@ public class User extends AbstractBaseEntity {
 
         @Override
         public Builder id(Long userId) {
-            //this.user.setId(userId);
-            this.entity.id = userId;
+            this.entity.setId(userId);
             return this;
         }
 
-        public Builder name(String firstName) {
-            this.entity.name = firstName;
+        public Builder name(String name) {
+            this.entity.setName(name);
             return this;
         }
 
         public Builder lastName(String lastName) {
-            this.entity.lastName = lastName;
+            this.entity.setLastName(lastName);
             return this;
         }
 
         public Builder email(String email) {
-            this.entity.email = email;
+            this.entity.setEmail(email);
             return this;
         }
 
         public Builder password(String password) {
-            this.entity.password = password;
+            this.entity.setPassword(password);
             return this;
         }
 
         public Builder tin(String tin) {
-            this.entity.tin = tin;
+            this.entity.setTin(tin);
             return this;
         }
 
         public Builder entrepreneurType(EntrepreneurType type) {
-            this.entity.type = type;
+            this.entity.setEntrepreneurType(type);
             return this;
         }
 
         public Builder address(String address) {
-            this.entity.address = address;
+            this.entity.setAddress(address);
             return this;
         }
 
         public Builder dateOfRegistration(Date dateOfRegistration) {
-            this.entity.dateOfRegistration = dateOfRegistration;
+            this.entity.setDateOfRegistration(dateOfRegistration);
             return this;
         }
 
         public Builder userRole(UserRole userRole) {
-            this.entity.userRole = userRole;
+            this.entity.setUserRole(userRole);
             return this;
         }
         public User build() {

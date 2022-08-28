@@ -1,4 +1,4 @@
-package com.my.persistence.dao;
+package com.my.persistence.db;
 
 public enum FieldDB {
     ENTITY_ID("id"),
@@ -23,6 +23,14 @@ public enum FieldDB {
     REPORT_COMMENT("comment"),
     REPORT_USER_ID("user_id");
 
+    private final String field;
 
-    FieldDB(String fieldName) {}
+    FieldDB(String fieldName) {
+        this.field = fieldName;
+    }
+
+    public String getField() {
+        return field;
+    }
+
 }

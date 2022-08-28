@@ -7,6 +7,8 @@ import java.util.Optional;
 
 public interface UserDAO extends BaseDAO<User>{
 
+//    boolean validate(String email, String pass);
+
     boolean existsByEmail(String email);
 
     Optional<User> findByEmail(String email);

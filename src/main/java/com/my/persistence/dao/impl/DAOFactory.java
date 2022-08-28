@@ -9,14 +9,14 @@ public class DAOFactory {
 
     public static ReportDAO getReportDaoInstance() {
         if (reportDAO == null)
-            reportDAO = new ReportDAOImpl();
+            reportDAO = new MySQLReportDAOImpl();
 
         return reportDAO;
     }
 
     public static UserDAO getUserDaoInstance() {
         if (userDAO == null)
-            userDAO = new UserDAOImpl();
+            userDAO = new MySQLUserDAOImpl();
 
         return userDAO;
     }
