@@ -8966,3 +8966,370 @@
 2022-08-28 01:54:52 INFO  RegistrationCommand:19 - Registration request: /registration request methodGET
 2022-08-28 01:54:52 INFO  RegistrationCommand:21 - Request to registration page
 2022-08-28 01:54:52 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:01:53 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:01:53 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:01:59 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 01:01:59 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-29 01:01:59 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 01:02:00 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:02:00 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:02:05 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 01:02:05 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 01:02:05 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-29 01:02:05 INFO  UserService:21 - Validation login data for input: a@a.a, 123456
+2022-08-29 01:02:05 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-29 01:02:05 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/inspector/reports
+2022-08-29 01:02:05 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 01:02:05 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 01:02:06 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:02:06 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:02:17 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:02:17 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:02:19 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:02:19 INFO  RegistrationCommand:19 - Registration request: /registration request methodGET
+2022-08-29 01:02:19 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:02:19 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:02:19 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:02:19 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:02:29 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:02:29 INFO  RegistrationCommand:19 - Registration request: /registration request methodPOST
+2022-08-29 01:02:29 ERROR FrontControllerServlet:82 - Exception Name is null
+2022-08-29 01:02:29 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:02:29 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:06:12 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:06:12 INFO  RegistrationCommand:19 - Registration request: /registration request methodGET
+2022-08-29 01:06:12 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:06:12 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:06:12 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@6fa113dc
+2022-08-29 01:06:12 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:15:34 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3e990@1e58039a
+2022-08-29 01:15:34 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:15:51 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:15:51 INFO  RegistrationCommand:19 - Registration request: /registration request method  GET
+2022-08-29 01:15:51 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:15:51 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:15:51 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3e990@1e58039a
+2022-08-29 01:15:51 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:15:59 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:15:59 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:15:59 INFO  RegistrationCommand:24 - org.apache.catalina.util.ParameterMap@5ed5ad41
+2022-08-29 01:15:59 INFO  RegistrationCommand:34 - User entity has been created  User{id=null, email='', password='', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address=''}
+2022-08-29 01:16:00 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:16:00 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3e990@1e58039a
+2022-08-29 01:16:00 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:16:03 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3e990@1e58039a
+2022-08-29 01:16:03 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:16:14 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:16:14 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:16:14 INFO  RegistrationCommand:24 - org.apache.catalina.util.ParameterMap@5ed5ad41
+2022-08-29 01:16:14 INFO  RegistrationCommand:34 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 01:16:14 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:16:14 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3e990@1e58039a
+2022-08-29 01:16:14 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:21:05 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800eca668@4476cad9
+2022-08-29 01:21:05 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:21:08 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:21:08 INFO  RegistrationCommand:19 - Registration request: /registration request method  GET
+2022-08-29 01:21:08 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:21:08 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:21:08 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800eca668@4476cad9
+2022-08-29 01:21:08 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:21:14 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:21:14 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:21:14 INFO  RegistrationCommand:24 - org.apache.catalina.util.ParameterMap@34e47a4d
+2022-08-29 01:21:14 INFO  RegistrationCommand:34 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 01:21:15 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:21:15 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800eca668@4476cad9
+2022-08-29 01:21:15 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:22:38 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:22:38 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:22:38 INFO  RegistrationCommand:24 - org.apache.catalina.util.ParameterMap@34e47a4d
+2022-08-29 01:22:38 INFO  RegistrationCommand:34 - User entity has been created  User{id=null, email='Konstantin', password='', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 01:22:38 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:22:38 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800eca668@4476cad9
+2022-08-29 01:22:38 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:26:26 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3a990@46ac7bc9
+2022-08-29 01:26:26 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:26:30 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:26:30 INFO  RegistrationCommand:19 - Registration request: /registration request method  GET
+2022-08-29 01:26:30 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:26:30 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:26:31 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3a990@46ac7bc9
+2022-08-29 01:26:31 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:26:37 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:26:37 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:26:37 INFO  RegistrationCommand:27 - org.apache.catalina.util.ParameterMap@6201e501
+2022-08-29 01:26:37 INFO  RegistrationCommand:37 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 01:26:38 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:26:38 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3a990@46ac7bc9
+2022-08-29 01:26:38 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:29:23 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@4476cad9
+2022-08-29 01:29:23 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:29:25 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:29:25 INFO  RegistrationCommand:19 - Registration request: /registration request method  GET
+2022-08-29 01:29:25 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:29:25 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:29:25 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@4476cad9
+2022-08-29 01:29:25 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:29:48 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:29:48 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:29:48 INFO  RegistrationCommand:25 - Request parameters: KonstantinKonstantinKonstantinKonstantinnullPHYSICAL_PERSONKonstantin
+2022-08-29 01:29:48 INFO  RegistrationCommand:37 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 01:29:48 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:29:49 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca668@4476cad9
+2022-08-29 01:29:49 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:43:52 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800e3e990@4476cad9
+2022-08-29 01:43:52 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:43:56 INFO  RegistrationFilter:29 - 
+2022-08-29 01:43:56 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:43:56 INFO  RegistrationCommand:19 - Registration request: /registration request method  GET
+2022-08-29 01:43:56 INFO  RegistrationCommand:21 - Request to registration page
+2022-08-29 01:43:56 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 01:43:56 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800e3e990@4476cad9
+2022-08-29 01:43:56 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 01:44:06 INFO  RegistrationFilter:29 - 
+2022-08-29 01:44:06 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 01:44:06 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 01:44:06 INFO  RegistrationCommand:25 - Request parameters: KonstantinKonstantinKonstantinKonstantinnullPHYSICAL_PERSONKonstantin
+2022-08-29 01:44:06 INFO  RegistrationCommand:37 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 01:44:07 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 01:44:07 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800e3e990@4476cad9
+2022-08-29 01:44:07 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:08:33 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800e3e990@4476cad9
+2022-08-29 02:08:33 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:08:36 INFO  RegistrationFilter:29 -   
+2022-08-29 02:08:36 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800e3e990@4476cad9
+2022-08-29 02:08:36 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:08:46 INFO  RegistrationFilter:29 - 
+2022-08-29 02:08:46 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:08:46 INFO  RegistrationCommand:19 - Registration request: /registration request method  POST
+2022-08-29 02:08:46 INFO  RegistrationCommand:25 - Request parameters: KonstantinKonstantinKonstantinKonstantinnullPHYSICAL_PERSONKonstantin
+2022-08-29 02:08:46 INFO  RegistrationCommand:37 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=null, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 02:08:46 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 02:08:46 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800e3e990@4476cad9
+2022-08-29 02:08:46 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:17:18 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca420@1e58039a
+2022-08-29 02:17:18 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:17:37 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:17:37 INFO  RegistrationCommand:20 - Registration request: /registration request method  GET
+2022-08-29 02:17:37 INFO  RegistrationCommand:22 - Request to registration page
+2022-08-29 02:17:37 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 02:17:38 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca420@1e58039a
+2022-08-29 02:17:38 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:17:46 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:17:46 INFO  RegistrationCommand:20 - Registration request: /registration request method  POST
+2022-08-29 02:17:46 INFO  RegistrationCommand:26 - Request parameters: KonstantinKonstantinKonstantinKonstantinnullPHYSICAL_PERSONKonstantin
+2022-08-29 02:17:46 INFO  RegistrationCommand:39 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='null', address='Konstantin'}
+2022-08-29 02:17:47 ERROR FrontControllerServlet:82 - Exception Cannot parse null string
+2022-08-29 02:17:47 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca420@1e58039a
+2022-08-29 02:17:47 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:18:28 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800eca420@1e58039a
+2022-08-29 02:18:28 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:18:39 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:18:39 INFO  RegistrationCommand:20 - Registration request: /registration request method  GET
+2022-08-29 02:18:39 INFO  RegistrationCommand:22 - Request to registration page
+2022-08-29 02:18:39 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 02:18:40 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:18:40 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:18:40 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:18:40 INFO  RegistrationCommand:20 - Registration request: /registration request method  GET
+2022-08-29 02:18:40 INFO  RegistrationCommand:22 - Request to registration page
+2022-08-29 02:18:40 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 02:18:40 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:18:40 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:18:50 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:18:50 INFO  RegistrationCommand:20 - Registration request: /registration request method  POST
+2022-08-29 02:18:50 INFO  RegistrationCommand:26 - Request parameters: KonstantinKonstantinKonstantinKonstantinKonstantinPHYSICAL_PERSONKonstantin
+2022-08-29 02:18:50 INFO  RegistrationCommand:39 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='Konstantin', address='Konstantin'}
+2022-08-29 02:18:50 ERROR FrontControllerServlet:82 - Exception For input string: "Konstantin"
+2022-08-29 02:18:50 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:18:50 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:20:05 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:20:05 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:20:11 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:20:11 INFO  RegistrationCommand:20 - Registration request: /registration request method  POST
+2022-08-29 02:20:11 INFO  RegistrationCommand:26 - Request parameters: KonstantinKonstantinKonstantinKonstantinKonstantPHYSICAL_PERSONKonstantin
+2022-08-29 02:20:11 INFO  RegistrationCommand:39 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='Konstant', address='Konstantin'}
+2022-08-29 02:20:11 ERROR FrontControllerServlet:82 - Exception For input string: "Konstant"
+2022-08-29 02:20:11 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:20:11 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:20:13 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:20:13 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:20:26 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:20:26 INFO  RegistrationCommand:20 - Registration request: /registration request method  POST
+2022-08-29 02:20:26 INFO  RegistrationCommand:26 - Request parameters: KonstantinKonstantinKonstantinKonstantin00000002PHYSICAL_PERSONKonstantin
+2022-08-29 02:20:26 INFO  RegistrationCommand:39 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='00000002', address='Konstantin'}
+2022-08-29 02:20:26 ERROR MySQLUserDAOImpl:56 - Transaction fault
+2022-08-29 02:20:26 INFO  RegistrationCommand:43 - User has been registered: User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='00000002', address='Konstantin'}
+2022-08-29 02:20:26 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 02:20:26 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f3c6c0@10a9d524
+2022-08-29 02:20:26 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:22:51 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:22:51 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:22:53 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:22:53 INFO  RegistrationCommand:20 - Registration request: /registration request method  GET
+2022-08-29 02:22:53 INFO  RegistrationCommand:22 - Request to registration page
+2022-08-29 02:22:53 INFO  FrontControllerServlet:80 - Page after executing command  /registration
+2022-08-29 02:22:53 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:22:53 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:23:07 DEBUG FrontControllerServlet:74 - Command: RegistrationCommand
+2022-08-29 02:23:07 INFO  RegistrationCommand:20 - Registration request: /registration request method  POST
+2022-08-29 02:23:07 INFO  RegistrationCommand:26 - Request parameters: KonstantinKonstantinKonstantinKonstantin00000002PHYSICAL_PERSONKonstantin
+2022-08-29 02:23:07 INFO  RegistrationCommand:39 - User entity has been created  User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='00000002', address='Konstantin'}
+2022-08-29 02:23:08 INFO  RegistrationCommand:43 - User has been registered: User{id=null, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='00000002', address='Konstantin'}
+2022-08-29 02:23:08 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 02:23:08 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:23:08 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:29:59 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:29:59 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 02:29:59 INFO  LoginCommand:33 - Login process with data: Konstantin, Konstantin
+2022-08-29 02:29:59 INFO  UserService:21 - Validation login data for input: Konstantin, Konstantin
+2022-08-29 02:29:59 INFO  LoginCommand:38 - User logged in + User{id=4, email='Konstantin', password='Konstantin', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=2022-08-29, tin='00000002', address='Konstantin'}
+2022-08-29 02:29:59 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/user/reports
+2022-08-29 02:29:59 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.command.user.UserReportsCommand@2961e930
+2022-08-29 02:29:59 INFO  FrontControllerServlet:80 - Page after executing command  null
+2022-08-29 02:29:59 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:29:59 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:31:08 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:31:08 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:31:21 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:31:21 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 02:31:21 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-08-29 02:31:21 INFO  UserService:21 - Validation login data for input: u@u.u, 123456
+2022-08-29 02:31:21 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-08-29 02:31:21 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/user/reports
+2022-08-29 02:31:21 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.command.user.UserReportsCommand@2961e930
+2022-08-29 02:31:21 INFO  FrontControllerServlet:80 - Page after executing command  null
+2022-08-29 02:31:21 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:31:21 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:32:51 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:32:51 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:33:00 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:33:00 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 02:33:00 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-29 02:33:00 INFO  UserService:21 - Validation login data for input: a@a.a, 123456
+2022-08-29 02:33:00 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-29 02:33:00 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/inspector/reports
+2022-08-29 02:33:00 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:33:00 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:33:00 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800e3aef0@46ac7bc9
+2022-08-29 02:33:00 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:35:31 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec8210@2a941b7c
+2022-08-29 02:35:31 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:35:34 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:35:34 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-29 02:35:34 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 02:35:34 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec8210@2a941b7c
+2022-08-29 02:35:34 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:35:40 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:35:40 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 02:35:40 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-29 02:35:40 INFO  UserService:21 - Validation login data for input: a@a.a, 123456
+2022-08-29 02:35:40 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-29 02:35:40 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/inspector/reports
+2022-08-29 02:35:40 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:35:40 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:35:41 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec8210@2a941b7c
+2022-08-29 02:35:41 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:42:35 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:42:35 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-29 02:42:35 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 02:42:35 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:42:35 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:42:41 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:42:41 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 02:42:41 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-29 02:42:41 INFO  UserService:21 - Validation login data for input: a@a.a, 123456
+2022-08-29 02:42:41 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-29 02:42:41 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/inspector/reports
+2022-08-29 02:42:41 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:42:41 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:42:41 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:42:41 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:42:58 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:42:58 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:42:58 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:42:58 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:42:59 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:42:59 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:00 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:00 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:00 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:00 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:01 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:01 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:01 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:01 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:02 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:02 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:02 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:02 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:02 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:02 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:08 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:08 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:08 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:08 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:10 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:10 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:10 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$296/0x0000000800f866a8@6aedd97c
+2022-08-29 02:43:10 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:48 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 02:43:48 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:52 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:43:52 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-29 02:43:52 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 02:43:52 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 02:43:52 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 02:43:57 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 02:43:57 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 02:43:57 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-29 02:43:57 INFO  UserService:21 - Validation login data for input: a@a.a, 123456
+2022-08-29 02:43:57 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-29 02:43:57 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/inspector/reports
+2022-08-29 02:43:57 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 02:43:57 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 02:43:58 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 02:43:58 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:09:20 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 05:09:20 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-29 05:09:20 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 05:09:20 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:09:20 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:09:29 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 05:09:29 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 05:09:29 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-29 05:09:29 INFO  UserService:21 - Validation login data for input: a@a.a, 123456
+2022-08-29 05:09:29 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-29 05:09:29 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/inspector/reports
+2022-08-29 05:09:29 DEBUG FrontControllerServlet:74 - Command: InspectorReportsCommand
+2022-08-29 05:09:29 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/inspector/reports
+2022-08-29 05:09:29 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:09:29 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:09:33 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:09:33 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:09:33 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:09:33 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:09:35 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:09:35 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:09:49 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 05:09:49 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-29 05:09:49 INFO  FrontControllerServlet:80 - Page after executing command  /login
+2022-08-29 05:09:50 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:09:50 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-29 05:10:02 DEBUG FrontControllerServlet:74 - Command: LoginCommand
+2022-08-29 05:10:02 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-29 05:10:02 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-08-29 05:10:02 INFO  UserService:21 - Validation login data for input: u@u.u, 123456
+2022-08-29 05:10:02 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-08-29 05:10:02 INFO  FrontControllerServlet:80 - Page after executing command  redirect:/user/reports
+2022-08-29 05:10:02 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.command.user.UserReportsCommand@5c8aa5
+2022-08-29 05:10:02 INFO  FrontControllerServlet:80 - Page after executing command  null
+2022-08-29 05:10:02 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
+2022-08-29 05:10:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404

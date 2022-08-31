@@ -23,6 +23,8 @@ public class Report extends AbstractBaseEntity {
 
     private String comment;
 
+    private User user;
+
     public static Builder builder() {
         return new Report.Builder();
     }
@@ -81,6 +83,11 @@ public class Report extends AbstractBaseEntity {
 
         public Builder userId(Long userId) {
             this.entity.setUserId(userId);
+            return this;
+        }
+
+        public Builder user(User user) {
+            this.entity.setUser(user);
             return this;
         }
 
@@ -162,6 +169,13 @@ public class Report extends AbstractBaseEntity {
         this.comment = comment;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     @Override
     public boolean equals(Object o) {

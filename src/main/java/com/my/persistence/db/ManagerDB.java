@@ -14,9 +14,7 @@ public class ManagerDB {
     private static final String PASSWORD = "qwertyuiopOblt1>?";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/tax_data";
 
-    private static final String URL = DB_URL +
-            "?user=" + USER +
-            "&password=" + PASSWORD;
+    private static final String URL = DB_URL + "?autoReconnect=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
 
     //объект соединения - всего один
@@ -36,7 +34,7 @@ public class ManagerDB {
         Connection con = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(DB_URL, USER, PASSWORD);
+            con = DriverManager.getConnection(URL, USER, PASSWORD);
             con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
             con.setAutoCommit(false);
         } catch (ClassNotFoundException e) {

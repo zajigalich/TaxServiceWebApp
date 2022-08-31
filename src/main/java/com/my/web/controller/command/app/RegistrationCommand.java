@@ -3,6 +3,7 @@ package com.my.web.controller.command.app;
 import com.my.exception.UserAlreadyExistsException;
 import com.my.persistence.entity.EntrepreneurType;
 import com.my.persistence.entity.User;
+import com.my.persistence.entity.UserRole;
 import com.my.service.RegistrationService;
 import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
@@ -16,18 +17,23 @@ public class RegistrationCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
-        log.info("Registration request: " + request.getRequestURI() + " request method" + request.getMethod());
+        log.info("Registration request: " + request.getRequestURI() + " request method  " + request.getMethod());
         if (request.getMethod().equalsIgnoreCase("get")) {
             log.info("Request to registration page");
             return "/registration";
         }
+
+        /*log.info("Request parameters: " + request.getParameter("firstName")+ request.getParameter("lastName")+ request.getParameter("email")
+                + request.getParameter("password")+ request.getParameter("tin")+ request.getParameter("entrepreneur")
+                + request.getParameter("address"));*/
         User user = User.builder()
                 .name(request.getParameter("firstName"))
+                .userRole(UserRole.USER)
                 .lastName(request.getParameter("lastName"))
                 .email(request.getParameter("email"))
                 .password(request.getParameter("password"))
                 .tin(request.getParameter("tin"))
-                .entrepreneurType(EntrepreneurType.valueOf(request.getParameter("personality")))
+                .entrepreneurType(EntrepreneurType.valueOf(request.getParameter("entrepreneur")))
                 .address(request.getParameter("address"))
                 .build();
         log.info("User entity has been created  " + user);

@@ -1,11 +1,12 @@
 package com.my.web.controller;
 
 import com.my.web.controller.command.*;
-import com.my.web.controller.command.app.LoginCommand;
-import com.my.web.controller.command.app.MainCommand;
-import com.my.web.controller.command.app.RegistrationCommand;
+import com.my.web.controller.command.app.*;
+import com.my.web.controller.command.inspector.InspectorReportViewCommand;
 import com.my.web.controller.command.inspector.InspectorReportsCommand;
-import com.my.web.controller.command.user.UserReportsCommand;
+import com.my.web.controller.command.inspector.InspectorStatisticCommand;
+import com.my.web.controller.command.inspector.InspectorUserViewCommand;
+import com.my.web.controller.command.user.*;
 import org.apache.log4j.Logger;
 
 import javax.servlet.ServletConfig;
@@ -41,11 +42,20 @@ public class FrontControllerServlet extends HttpServlet {
         commands.put("", new MainCommand());
         commands.put("registration", new RegistrationCommand());
         commands.put("login", new LoginCommand());
-        //commands.put("logout", new LogoutCommand());
+        commands.put("logout", new LogoutCommand());
 
         commands.put("user/reports", new UserReportsCommand());
+        commands.put("user/user-info", new UserInfoCommand());
+        commands.put("user/report-form", new UserReportApplyCommand());
+        commands.put("user/report-edit", new UserReportEditCommand());
+        commands.put("user/report-delete", new UserReportDeleteCommand());
 
         commands.put("inspector/reports", new InspectorReportsCommand());
+        commands.put("inspector/statistic", new InspectorStatisticCommand());
+        commands.put("inspector/user-view", new InspectorUserViewCommand());
+        commands.put("inspector/report-view", new InspectorReportViewCommand());
+
+        commands.put("error", new ExceptionCommand());
 
     }
 

@@ -1,4 +1,4 @@
-package com.my.service;
+package com.my.web.dto;
 
 public enum SortField {
     YEAR_OLD("Year old", "year", "asc"),

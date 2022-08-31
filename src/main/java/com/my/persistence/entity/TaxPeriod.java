@@ -7,6 +7,13 @@ public enum TaxPeriod {
     FOURTH_PERIOD("Fourth period"),
     YEAR("Year");
 
+    private String period;
+
     TaxPeriod(String period) {
+        this.period = period;
+    }
+
+    public String getPeriod() {
+        return period;
     }
 }

@@ -86,7 +86,7 @@
 
                     <div class="form-group">
                         <label for="tin"><fmt:message key="registration.data.tin"/> </label>
-                        <input id="tin" name="ipn" type="text" class="form-control"
+                        <input id="tin" name="tin" type="text" class="form-control"
                                placeholder="<fmt:message key="registration.data.input.tin"/>">
                     </div>
 

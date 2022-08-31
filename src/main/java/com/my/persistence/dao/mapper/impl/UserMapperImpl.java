@@ -30,4 +30,13 @@ public class UserMapperImpl implements ObjectMapper<User> {
                 .dateOfRegistration(resultSet.getDate(USER_REGISTRATION_TIME.getField()))
                 .build();
     }
+
+    public static User extractUserFromResultSetForReport(ResultSet resultSet) throws SQLException {
+        return User.builder()
+                .id(resultSet.getLong(ENTITY_ID.getField()))
+                .name(resultSet.getString(USER_INFO_NAME.getField()))
+                .lastName(resultSet.getString(USER_INFO_LASTNAME.getField()))
+                .tin(resultSet.getString(USER_TIN.getField()))
+                .build();
+    }
 }

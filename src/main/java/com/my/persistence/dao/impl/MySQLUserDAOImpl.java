@@ -24,8 +24,8 @@ public class MySQLUserDAOImpl implements UserDAO {
             "(role_id, entrepreneur_type_id, name, lastname, email, password, registration_time, tin, address) " +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";*/
     private final static String CREATE_USER = "INSERT INTO user " +
-            "(role_id, entrepreneur_type_id, name, lastname, email, password, tin, address) " +
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+            "(role_id, entrepreneur_type_id, name, lastname, email, password, tin, address ) " +
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
     private final static String FIND_BY_ID = "SELECT * FROM USER WHERE id = ?;";
     private final static String FIND_BY_EMAIL = "SELECT * FROM USER WHERE email = ?;";
     private static final String FIND_ALL_USERS = "SELECT * FROM user;";
@@ -41,14 +41,14 @@ public class MySQLUserDAOImpl implements UserDAO {
         try (Connection con = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = con.prepareStatement(CREATE_USER)) {
                 int k = 0;
-                statement.setInt(++k, 1); // user.getUserRole().ordinal() +
+                statement.setInt(++k, user.getUserRole().ordinal() + 1); // user.getUserRole().ordinal() +
                 statement.setInt(++k, user.getEntrepreneurType().ordinal() + 1);
                 statement.setString(++k, user.getName());
                 statement.setString(++k, user.getLastName());
                 statement.setString(++k, user.getEmail());
                 statement.setString(++k, user.getPassword());
                 //statement.setDate(++k, user.getDateOfRegistration());
-                statement.setInt(++k, Integer.parseInt(user.getTin()));
+                statement.setString(++k, user.getTin());
                 statement.setString(++k, user.getAddress());
                 statement.execute();
                 con.commit();
@@ -137,37 +137,12 @@ public class MySQLUserDAOImpl implements UserDAO {
 
     @Override
     public User update(User entity) {
-        /* public int addEmployee(Employee employee) throws ApplicationException {
-        Connection connection = null;
-        Statement stmt = null;
-        String query = "insert into employee(emp_name, salary, dept_name) values('"
-                + employee.getEmployeeName()
-                + "',"
-                + employee.getSalary()
-                + ",'" + employee.getDeptName() + "')";
-
-        int row = -1;
-        try {
-            connection = ds.getConnection();
-            stmt = connection.createStatement();
-            row = stmt.executeUpdate(query);
-        } catch (SQLException e) {
-            ApplicationException exception = new ApplicationException(
-                    "Unable to insert data: " + e.getMessage(), e);
-            throw exception;
-        } finally {
-            DbUtil.close(stmt);
-            DbUtil.close(connection);
-        }
-        return row;
-    }
-}*/
 
         return null;
     }
 
     @Override
-    public boolean delete(String id) {
+    public boolean delete(Long id) {
         return false;
     }
 
@@ -176,9 +151,9 @@ public class MySQLUserDAOImpl implements UserDAO {
         List<User> users = null;
         try (Connection con = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = con.prepareStatement(FIND_ALL_USERS)) {
-                ResultSet resultSet = statement.getResultSet();
+                ResultSet resultSet = statement.executeQuery();
+                users = new ArrayList<>();
                 while (resultSet.next()) {
-                    users = new ArrayList<>();
                     users.add(mapper.extractFromResultSet(resultSet));
                 }
                 resultSet.close();

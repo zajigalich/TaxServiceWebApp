@@ -1,6 +1,6 @@
 <%@ page import="com.my.persistence.entity.TaxPeriod" %>
 <%@ page import="com.my.persistence.entity.ReportStatus" %>
-<%@ page import="com.my.service.SortField" %>
+<%@ page import="com.my.web.dto.SortField" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<%@include file="user_navbar.html" %>
+<%@include file="user-navbar.html" %>
 
 <div class="container">
     <div class="row">
@@ -41,7 +41,7 @@
 
                 <select id="status" name="status" class="form-select" aria-label="Default select example">
                     <option selected value=""><fmt:message key="reports.search.select.status"/></option>
-                    <c:forEach var="status" items="${Status.values()}">
+                    <c:forEach var="status" items="${ReportStatus.values()}">
                         <option label="<fmt:message key="reports.status.${status}"/>"
                                 value="${status}" <c:if test="${status == sessionScope.status}"> selected </c:if>>
                             ..

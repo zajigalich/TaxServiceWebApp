@@ -33,7 +33,7 @@ public class LoginCommand implements Command {
         log.info("Login process with data: " + email +", " + password);
 
         try {
-            User user = UserService.validateLoginData(email, password);
+            User user = UserService.getInstance().validateLoginData(email, password);
             session.setAttribute("user", user);
             log.info("User logged in + " + user);
 

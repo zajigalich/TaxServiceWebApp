@@ -6,5 +6,5 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public interface ObjectMapper <E extends AbstractBaseEntity> {
-    public E extractFromResultSet(ResultSet resultSet) throws SQLException;
+    E extractFromResultSet(ResultSet resultSet) throws SQLException;
 }
