@@ -26,8 +26,8 @@
         <thead>
         <tr>
             <td class="text-center" colspan="2">
-                <c:if test="${requestScope.noUserFoundException != null}">
-                    <span><c:out value="${requestScope.noUserFoundException}"/></span>
+                <c:if test="${requestScope.UserNotFoundException != null}">
+                    <span><c:out value="${requestScope.UserNotFoundException}"/></span>
                 </c:if>
                 <c:if test="${requestScope.errorInvalidParam != null}">
                     <span><c:out value="${requestScope.errorInvalidParam}"/></span>
@@ -51,7 +51,7 @@
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.tin"/></b></td>
-            <td><span>${requestScope.userDTO.age}</span></td>
+            <td><span>${requestScope.userDTO.tin}</span></td>
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.registration.date"/></b></td>
@@ -65,7 +65,7 @@
             <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
             <td>
                 <span>
-                    <fmt:message key="user.data.dto.personality.name.${requestScope.userDTO.personality}"/>
+                    <fmt:message key="user.data.entrepreneur.name.${requestScope.userDTO.personality}"/>
                 </span>
             </td>
         </tr>

@@ -1,5 +1,7 @@
 package com.my.web.filter;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +10,8 @@ import java.io.IOException;
 
 @WebFilter("/inspector/reports")
 public class ParameterUserIdFilter implements Filter {
+
+    private static final Logger log = Logger.getLogger(ParameterUserIdFilter.class);
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)

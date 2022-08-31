@@ -9333,3 +9333,100 @@
 2022-08-29 05:10:02 INFO  FrontControllerServlet:80 - Page after executing command  null
 2022-08-29 05:10:02 DEBUG FrontControllerServlet:74 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800e3aef0@e71b310
 2022-08-29 05:10:02 INFO  FrontControllerServlet:80 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:19:33 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ed22a8@3d85951d
+2022-08-31 04:19:33 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:19:47 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 04:19:47 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-31 04:19:47 INFO  FrontControllerServlet:90 - Page after executing command  /login
+2022-08-31 04:19:47 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ed22a8@3d85951d
+2022-08-31 04:19:47 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:19:50 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ed22a8@3d85951d
+2022-08-31 04:19:50 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:19:51 DEBUG FrontControllerServlet:84 - Command: RegistrationCommand
+2022-08-31 04:19:51 INFO  RegistrationCommand:20 - Registration request: /registration request method  GET
+2022-08-31 04:19:51 INFO  RegistrationCommand:22 - Request to registration page
+2022-08-31 04:19:51 INFO  FrontControllerServlet:90 - Page after executing command  /registration
+2022-08-31 04:19:51 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ed22a8@3d85951d
+2022-08-31 04:19:51 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:21:23 DEBUG FrontControllerServlet:84 - Command: RegistrationCommand
+2022-08-31 04:21:23 INFO  RegistrationCommand:20 - Registration request: /registration request method  POST
+2022-08-31 04:21:23 INFO  RegistrationCommand:39 - User entity has been created  User{id=null, email='1', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='00000005', address='Home'}
+2022-08-31 04:21:23 INFO  RegistrationCommand:43 - User has been registered: User{id=null, email='1', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='Konstantin', lastName='Konstantin', dateOfRegistration=null, tin='00000005', address='Home'}
+2022-08-31 04:21:23 INFO  FrontControllerServlet:90 - Page after executing command  /login
+2022-08-31 04:21:23 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ed22a8@3d85951d
+2022-08-31 04:21:23 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:22:00 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 04:22:00 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-31 04:22:00 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-31 04:22:00 INFO  UserService:32 - Validation login data for input: a@a.a, 123456
+2022-08-31 04:22:00 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-31 04:22:00 INFO  FrontControllerServlet:90 - Page after executing command  redirect:/inspector/reports
+2022-08-31 04:22:00 DEBUG FrontControllerServlet:84 - Command: InspectorReportsCommand
+2022-08-31 04:22:00 ERROR FrontControllerServlet:92 - Exception Cannot invoke "java.lang.Long.longValue()" because "id" is null
+2022-08-31 04:22:00 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ed22a8@3d85951d
+2022-08-31 04:22:00 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:23:50 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec9ca8@4205268c
+2022-08-31 04:23:50 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:23:51 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 04:23:51 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-31 04:23:51 INFO  FrontControllerServlet:90 - Page after executing command  /login
+2022-08-31 04:23:51 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec9ca8@4205268c
+2022-08-31 04:23:51 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:23:57 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 04:23:57 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-31 04:23:57 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-31 04:23:57 INFO  UserService:32 - Validation login data for input: a@a.a, 123456
+2022-08-31 04:23:57 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-31 04:23:57 INFO  FrontControllerServlet:90 - Page after executing command  redirect:/inspector/reports
+2022-08-31 04:23:57 DEBUG FrontControllerServlet:84 - Command: InspectorReportsCommand
+2022-08-31 04:23:57 ERROR FrontControllerServlet:92 - Exception Cannot invoke "java.lang.Long.longValue()" because "id" is null
+2022-08-31 04:23:57 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec9ca8@4205268c
+2022-08-31 04:23:57 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:25:49 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec8000@31201487
+2022-08-31 04:25:49 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:25:51 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 04:25:51 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-31 04:25:51 INFO  FrontControllerServlet:90 - Page after executing command  /login
+2022-08-31 04:25:51 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec8000@31201487
+2022-08-31 04:25:51 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 04:25:59 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 04:25:59 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-31 04:25:59 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-31 04:25:59 INFO  UserService:32 - Validation login data for input: a@a.a, 123456
+2022-08-31 04:25:59 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-31 04:25:59 INFO  FrontControllerServlet:90 - Page after executing command  redirect:/inspector/reports
+2022-08-31 04:25:59 DEBUG FrontControllerServlet:84 - Command: InspectorReportsCommand
+2022-08-31 04:25:59 ERROR FrontControllerServlet:92 - Exception Cannot invoke "java.lang.Long.longValue()" because "id" is null
+2022-08-31 04:25:59 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ec8000@31201487
+2022-08-31 04:25:59 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 13:26:13 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800eca2a8@12980367
+2022-08-31 13:26:13 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 13:26:15 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 13:26:15 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-08-31 13:26:15 INFO  FrontControllerServlet:90 - Page after executing command  /login
+2022-08-31 13:26:16 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800eca2a8@12980367
+2022-08-31 13:26:16 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 13:26:23 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 13:26:23 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-31 13:26:23 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-31 13:26:24 INFO  UserService:32 - Validation login data for input: a@a.a, 123456
+2022-08-31 13:26:24 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-31 13:26:24 INFO  FrontControllerServlet:90 - Page after executing command  redirect:/inspector/reports
+2022-08-31 13:26:24 DEBUG FrontControllerServlet:84 - Command: InspectorReportsCommand
+2022-08-31 13:26:24 INFO  InspectorReportsCommand:35 - Request attributes: null, , null, null, null, null
+2022-08-31 13:26:24 ERROR FrontControllerServlet:92 - Exception Cannot invoke "java.lang.Long.longValue()" because "id" is null
+2022-08-31 13:26:24 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800eca2a8@12980367
+2022-08-31 13:26:24 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 13:38:01 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$275/0x0000000800f2fa88@33d70ee8
+2022-08-31 13:38:01 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404
+2022-08-31 13:38:07 DEBUG FrontControllerServlet:84 - Command: LoginCommand
+2022-08-31 13:38:07 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-08-31 13:38:07 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-08-31 13:38:08 INFO  UserService:32 - Validation login data for input: a@a.a, 123456
+2022-08-31 13:38:08 INFO  LoginCommand:38 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-08-31 13:38:08 INFO  FrontControllerServlet:90 - Page after executing command  redirect:/inspector/reports
+2022-08-31 13:38:08 DEBUG FrontControllerServlet:84 - Command: InspectorReportsCommand
+2022-08-31 13:38:08 INFO  InspectorReportsCommand:35 - Request attributes: null, , null, null, null, null
+2022-08-31 13:38:08 ERROR FrontControllerServlet:92 - Exception Cannot invoke "java.lang.Long.longValue()" because "id" is null
+2022-08-31 13:38:09 DEBUG FrontControllerServlet:84 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$275/0x0000000800f2fa88@33d70ee8
+2022-08-31 13:38:09 INFO  FrontControllerServlet:90 - Page after executing command  /WEB-INF/error/error404

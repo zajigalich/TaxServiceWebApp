@@ -44,7 +44,7 @@
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
-            <td><span><fmt:message key="user.data.dto.personality.name.${sessionScope.user.personality}"/></span></td>
+            <td><span><fmt:message key="user.data.entrepreneur.name.${sessionScope.user.personality}"/></span></td>
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.address"/></b></td>

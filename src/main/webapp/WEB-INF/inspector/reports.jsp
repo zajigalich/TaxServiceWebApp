@@ -34,7 +34,7 @@
                     <c:forEach var="period" items="${TaxPeriod.values()}">
                         <option label="<fmt:message key="reports.period.${period}"/>"
                                 value="${period}" <c:if test="${period == sessionScope.period}"> selected </c:if>>
-                            ..
+<%--                            ..--%>
                         </option>
                     </c:forEach>
 
