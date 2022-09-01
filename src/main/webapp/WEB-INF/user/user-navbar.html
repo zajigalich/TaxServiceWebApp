@@ -2,13 +2,17 @@
 
     <div class="form-group row">
         <div class="col-md-7">
-            <form style="display: inline;" action="/user/report-form." method="GET">
-                <button type="submit" class="btn btn-primary"><fmt:message key="user.navbar.report.apply"/></button>
+            <form style="display: inline;" action="/user/report-form" method="GET">
+                <button type="submit" class="btn btn-primary">
+                    <fmt:message key="user.navbar.report.apply"/>
+                </button>
             </form>
         </div>
         <div class="col-md-5">
             <form style="display: inline;" action="/user/reports" method="GET">
-                <button type="submit" class="btn btn-primary"><fmt:message key="user.navbar.reports"/></button>
+                <button type="submit" class="btn btn-primary">
+                    <fmt:message key="user.navbar.reports"/>
+                </button>
             </form>
         </div>
     </div>
@@ -37,7 +41,9 @@
             </div>
             <div class="col-sm-4">
                 <form style="display: inline;" action="/logout" method="POST">
-                    <button class="btn btn-danger" type="submit"><fmt:message key="user.navbar.logout"/></button>
+                    <button class="btn btn-danger" type="submit">
+                        <fmt:message key="user.navbar.logout"/>
+                    </button>
                 </form>
             </div>
         </div>

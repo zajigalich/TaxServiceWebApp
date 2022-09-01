@@ -20,10 +20,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 
-
-/**
- * The main servlet for processing requests, actions and displaying pages
- */
 @WebServlet(value = "/", name = "FrontControllerServlet")
 public class FrontControllerServlet extends HttpServlet {
 
@@ -31,13 +27,9 @@ public class FrontControllerServlet extends HttpServlet {
 
     private static final Logger log = Logger.getLogger(FrontControllerServlet.class);
 
-    /**
-     * Holder for all commands
-     */
     @Override
     public void init(ServletConfig config) {
-        config.getServletContext()
-                .setAttribute("loggedUsers", new HashSet<String>());
+        //config.getServletContext().setAttribute("loggedUsers", new HashSet<String>());
 
         commands.put("", new MainCommand());
         commands.put("registration", new RegistrationCommand());
@@ -73,21 +65,17 @@ public class FrontControllerServlet extends HttpServlet {
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        String path = request.getRequestURI()
-                .replaceFirst("/WEB-INF", "")
-                .replaceFirst("/", "");
+        String path = request.getRequestURI().replaceFirst("/", "");
 
-        //String path=request.getRequestURI();
-        //path=path.replaceAll(".*/", "");
-
-        Command command = commands.getOrDefault(path.trim(), (c) -> "/WEB-INF/error/error404");
+        Command command = commands.getOrDefault(path.trim(), (c) -> "/error/error404");
         log.debug("Command: " + command.toString());
-        String page = "/WEB-INF/error/error500";
+
+        String page = "/error/error500";
 
         try {
 
             page = command.execute(request);
-            log.info("Page after executing command  " + page);
+            //log.info("Page after executing command  " + page);
         } catch (Exception exception) {
             log.error("Exception " + exception.getMessage());
             request.setAttribute("exception", exception.getMessage());

@@ -8,6 +8,7 @@ import com.my.persistence.dao.impl.DAOFactory;
 import com.my.persistence.entity.Report;
 import com.my.persistence.entity.ReportStatus;
 import com.my.persistence.entity.TaxPeriod;
+import com.my.web.EntityDTOUtil;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.SortField;
 import com.my.web.dto.StatisticDTO;
@@ -15,7 +16,6 @@ import com.my.web.dto.StatisticDTO;
 import java.sql.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class InspectorService {

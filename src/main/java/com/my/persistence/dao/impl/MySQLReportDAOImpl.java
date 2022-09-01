@@ -61,6 +61,7 @@ public class MySQLReportDAOImpl implements ReportDAO {
 
     @Override
     public Report create(Report report) {
+        log.info("creating report");
         return setValuesCreateUpdate(report, SAVE_REPORT);
     }
 

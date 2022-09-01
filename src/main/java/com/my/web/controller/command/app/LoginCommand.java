@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 
 public class LoginCommand implements Command {
 
-    private static final Logger log = Logger.getLogger(LoginCommand.class.getName());
+        private static final Logger log = Logger.getLogger(LoginCommand.class.getName());
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -35,6 +35,7 @@ public class LoginCommand implements Command {
         try {
             User user = UserService.getInstance().validateLoginData(email, password);
             session.setAttribute("user", user);
+            session.setAttribute("userId", user.getId());
             log.info("User logged in + " + user);
 
             if (user.getUserRole().equals(UserRole.USER))

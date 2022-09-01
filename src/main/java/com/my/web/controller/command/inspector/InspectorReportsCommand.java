@@ -23,11 +23,11 @@ public class  InspectorReportsCommand implements Command {
     @Override
     public String execute(HttpServletRequest request) {
 
-        if (request.getMethod().equals("GET")) {
+        if (request.getMethod().equals("POST")) {
             return reportsGet(request);
         }
 
-        return null;
+        return "/WEB-INF/inspector/reports";
     }
 
     public String reportsGet(HttpServletRequest request) {

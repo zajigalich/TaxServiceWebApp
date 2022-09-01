@@ -8,6 +8,7 @@ import com.my.persistence.entity.Report;
 import com.my.persistence.entity.ReportStatus;
 import com.my.persistence.entity.TaxPeriod;
 import com.my.persistence.entity.User;
+import com.my.web.EntityDTOUtil;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.SortField;
 
@@ -15,12 +16,15 @@ import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class ReportService {
 
     private static final UserDAO userDAO = DAOFactory.getUserDaoInstance();
     private static final ReportDAO reportDAO = DAOFactory.getReportDaoInstance();
+
+    private static final Logger log = Logger.getLogger(ReportService.class.getName());
 
     private static ReportService reportService;
 
@@ -65,6 +69,7 @@ public class ReportService {
 
     public Report applyNewReport(ReportDTO report) {
 
+        log.info(report.toString());
         report.setStatus(String.valueOf(ReportStatus.PROCESSING));
         report.setReportDate(Date.valueOf(LocalDate.now()));
 

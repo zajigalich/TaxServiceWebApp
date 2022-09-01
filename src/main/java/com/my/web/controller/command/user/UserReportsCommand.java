@@ -17,6 +17,11 @@ public class UserReportsCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request) {
+
+        if (request.getMethod().equalsIgnoreCase("get")){
+            return "/WEB-INF/user/reports";
+        }
+
         Long id = ((User) request.getSession().getAttribute("user")).getId();
         Date date = (Date) request.getAttribute("date");
         TaxPeriod period = (TaxPeriod) request.getAttribute("period");

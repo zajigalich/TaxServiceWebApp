@@ -28,7 +28,7 @@
         <tbody>
         <tr>
             <td><b><fmt:message key="user.info.fullname"/></b></td>
-            <td><span>${sessionScope.user.firstName} ${sessionScope.user.lastName}</span></td>
+            <td><span>${sessionScope.user.name} ${sessionScope.user.lastName}</span></td>
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.email"/></b></td>
@@ -40,11 +40,11 @@
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.tin"/></b></td>
-            <td><span>${sessionScope.user.ipn}</span></td>
+            <td><span>${sessionScope.user.tin}</span></td>
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
-            <td><span><fmt:message key="user.data.entrepreneur.name.${sessionScope.user.personality}"/></span></td>
+            <td><span><fmt:message key="user.data.entrepreneur.name.${sessionScope.user.type}"/></span></td>
         </tr>
         <tr>
             <td><b><fmt:message key="user.info.address"/></b></td>

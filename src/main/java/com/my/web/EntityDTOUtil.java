@@ -1,4 +1,4 @@
-package com.my.service;
+package com.my.web;
 
 import com.my.persistence.entity.Report;
 import com.my.persistence.entity.ReportStatus;

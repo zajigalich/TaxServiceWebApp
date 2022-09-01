@@ -4,12 +4,13 @@ import com.my.exception.UserNotFoundException;
 import com.my.exception.WrongPasswordException;
 import com.my.persistence.dao.UserDAO;
 import com.my.persistence.dao.impl.DAOFactory;
+import com.my.persistence.entity.TaxPeriod;
 import com.my.persistence.entity.User;
+import com.my.web.EntityDTOUtil;
 import com.my.web.dto.UserDTO;
 import org.apache.log4j.Logger;
 
 import java.util.Optional;
-import java.util.function.Function;
 
 public class UserService {
 

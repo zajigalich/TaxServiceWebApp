@@ -4,5 +4,13 @@ public enum EntrepreneurType {
     PHYSICAL_PERSON("Physical Person"),
     JURIDICAL_PERSON("Juridical Person");
 
-    EntrepreneurType(String entrepreneurType) {}
+    private String type;
+
+    EntrepreneurType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
 }

@@ -22,8 +22,10 @@ public class ParameterUserIdFilter implements Filter {
 
         String idParam = request.getParameter("userId");
 
-        if (idParam != null)
+
+        if (idParam != null) {
             session.setAttribute("userId", idParam.isEmpty() ? null : Long.valueOf(idParam));
+        }
 
         request.setAttribute("userId", session.getAttribute("userId"));
 

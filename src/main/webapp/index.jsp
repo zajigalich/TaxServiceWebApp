@@ -8,8 +8,8 @@
 <head>
     <title>Tax Service</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <%--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>--%>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -20,7 +20,6 @@
                     <fmt:message key="main.login"/>
                 </button>
             </form>
-<%--            <span class="psw"> <a href="/registration.jsp"><fmt:message key="main.login"/></a></span>--%>
         </div>
         <div class="col-md-5">
             <form style="display: inline;" action="registration" method="get">
@@ -43,7 +42,7 @@
     </div>
 </nav>
 <div style="text-align: center;">
-    <p><fmt:message key="main.greeting"/></p>
+<%--    <p><fmt:message key="main.greeting"/></p>--%>
 </div>
 </body>
 </html>

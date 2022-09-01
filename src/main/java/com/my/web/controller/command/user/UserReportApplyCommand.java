@@ -43,4 +43,10 @@ public class UserReportApplyCommand implements Command {
 
         return "redirect:/user/reports";
     }
+
+
+    @Override
+    public String toString() {
+        return "UserReportApplyCommand";
+    }
 }

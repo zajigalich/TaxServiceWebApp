@@ -26,15 +26,15 @@
                 <input type="hidden" name="userId" value="${sessionScope.userId}"/>
                 <label for="date">
                     <fmt:message key="reports.search.select.date"/>
-                    <input type="date" id="date" name="date" min="2010-01-01" max="2021-12-31"
+                    <input type="date" id="date" name="date" min="2010-01-01" max="2022-9-31"
                            value="${sessionScope.date}"/>
                 </label>
                 <select id="period" name="period" class="form-select" aria-label="Default select example">
                     <option selected value=""><fmt:message key="reports.search.select.period"/></option>
                     <c:forEach var="period" items="${TaxPeriod.values()}">
-                        <option label="<fmt:message key="reports.period.${period}"/>"
+                        <option label="<fmt:message key="reports.period.${period.name()}"/>"
                                 value="${period}" <c:if test="${period == sessionScope.period}"> selected </c:if>>
-<%--                            ..--%>
+                            <fmt:message key="reports.period.${period.name()}"/>
                         </option>
                     </c:forEach>
 
@@ -45,7 +45,7 @@
                     <c:forEach var="status" items="${ReportStatus.values()}">
                         <option label="<fmt:message key="reports.status.${status}"/>"
                                 value="${status}" <c:if test="${status == sessionScope.status}"> selected </c:if>>
-                            ..
+                            <fmt:message key="reports.status.${status.name()}"/>
                         </option>
                     </c:forEach>
                 </select>
@@ -55,7 +55,7 @@
                     <c:forEach var="sortField" items="${SortField.values()}">
                         <option label="<fmt:message key="reports.sortField.${sortField}"/>"
                                 value="${sortField}" <c:if test="${sortField == sessionScope.sortBy}"> selected </c:if>>
-                            ..
+                            <fmt:message key="reports.sortField.${sortField}"/>
                         </option>
                     </c:forEach>
                 </select>
@@ -106,7 +106,7 @@
                     <td><a href="${pageContext.request.contextPath}/inspector/user-view?userId=${report.userId}">
                             ${report.userDTO.firstName} ${report.userDTO.lastName}</a>
                     </td>
-                    <td><span><c:out value="${report.userDTO.ipn}"/></span></td>
+                    <td><span><c:out value="${report.userDTO.tin}"/></span></td>
                     <td><span><c:out value="${report.reportDate}"/></span></td>
                     <td><span><c:out value="${report.year}"/></span></td>
                     <td><span><fmt:message key="reports.period.${report.taxPeriod}"/></span></td>

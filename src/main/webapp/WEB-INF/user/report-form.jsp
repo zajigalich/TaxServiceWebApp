@@ -61,9 +61,9 @@
                                 <option selected value=""><fmt:message key="reports.search.select.period"/></option>
                                 <c:forEach var="period" items="${TaxPeriod.values()}">
                                     <option label="<fmt:message key="reports.period.${period}"/>"
-                                            value="${period}"<c:if test="${period == param.get('period')}">
-                                        selected </c:if>>
-                                        ..
+                                            value="${period}"
+                                            <c:if test="${period == param.get('period')}">selected </c:if>>
+                                            <fmt:message key="reports.period.${period.name()}"/>
                                     </option>
                                 </c:forEach>
                             </select>

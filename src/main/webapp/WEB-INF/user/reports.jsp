@@ -1,15 +1,13 @@
 <%@ page import="com.my.persistence.entity.TaxPeriod" %>
 <%@ page import="com.my.persistence.entity.ReportStatus" %>
 <%@ page import="com.my.web.dto.SortField" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<fmt:setLocale value="${sessionScope.lang}"/>
+<fmt:setBundle basename="messages"/>
 <html>
 <head>
-    <fmt:setLocale value="${sessionScope.lang}"/>
-    <fmt:setBundle basename="message"/>
-
-    <meta charset="UTF-8">
     <title><fmt:message key="user.reports.data.title"/></title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -23,9 +21,11 @@
     <div class="row">
         <div class="col-11">
             <form action="${pageContext.request.contextPath}/user/reports" method="GET">
+<%--                <input type="hidden" name="userId" value="${sessionScope.userId}"/>--%>
+
                 <label for="date">
                     <fmt:message key="reports.search.select.date"/>
-                    <input type="date" id="date" name="date" min="2010-01-01" max="2021-12-31"
+                    <input type="date" id="date" name="date" min="2010-01-01" max="2022-9-31"
                            value="${sessionScope.date}"/>
                 </label>
                 <select id="period" name="period" class="form-select" aria-label="Default select example">
@@ -33,7 +33,7 @@
                     <c:forEach var="period" items="${TaxPeriod.values()}">
                         <option label="<fmt:message key="reports.period.${period}"/>"
                                 value="${period}" <c:if test="${period == sessionScope.period}"> selected </c:if>>
-                            ..
+                            <fmt:message key="reports.period.${period.name()}"/>
                         </option>
                     </c:forEach>
 
@@ -44,7 +44,7 @@
                     <c:forEach var="status" items="${ReportStatus.values()}">
                         <option label="<fmt:message key="reports.status.${status}"/>"
                                 value="${status}" <c:if test="${status == sessionScope.status}"> selected </c:if>>
-                            ..
+                            <fmt:message key="reports.status.${status.name()}"/>
                         </option>
                     </c:forEach>
                 </select>
@@ -54,7 +54,7 @@
                     <c:forEach var="sortField" items="${SortField.values()}">
                         <option label="<fmt:message key="reports.sortField.${sortField}"/>"
                                 value="${sortField}" <c:if test="${sortField == sessionScope.sortBy}"> selected </c:if>>
-                            ..
+                            <fmt:message key="reports.sortField.${sortField}"/>
                         </option>
                     </c:forEach>
                 </select>
