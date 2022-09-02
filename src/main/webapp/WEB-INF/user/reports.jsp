@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col-11">
-            <form action="${pageContext.request.contextPath}/user/reports" method="GET">
+            <form action="${pageContext.request.contextPath}/user/reports" method="POST">
 <%--                <input type="hidden" name="userId" value="${sessionScope.userId}"/>--%>
 
                 <label for="date">

@@ -22,10 +22,10 @@ public class MySQLReportDAOImpl implements ReportDAO {
     private final static ObjectMapper<Report> mapper = new ReportMapperImpl();
 
     private final static String SAVE_REPORT = "INSERT INTO "
-            + "report (comment, income, status_id, report_date, period_id, tax_rate, year, user_id) "
-            + "values (?, ?, ?, ?, ?, ?, ?, ?);";
-    private final static String UPDATE_REPORT = "UPDATE report r SET r.comment = ?, r.income = ?, r.status = ?, "
-            + " r.report_date = ?, r.tax_period = ?, r.tax_rate = ?, r.year = ?, r.user_id = ? "
+            + "report (comment, income, status_id, period_id, tax_rate, year, user_id) "
+            + "values (?, ?, ?, ?, ?, ?, ?);";
+    private final static String UPDATE_REPORT = "UPDATE report r SET r.comment = ?, r.income = ?, r.status_id = ?, "
+            + " r.period_id = ?, r.tax_rate = ?, r.year = ?, r.user_id = ? "
             + " WHERE r.id = ?";
 
     private final static String FIND_BY_PARAM = "SELECT r.* FROM report r"
@@ -62,22 +62,41 @@ public class MySQLReportDAOImpl implements ReportDAO {
     @Override
     public Report create(Report report) {
         log.info("creating report");
-        return setValuesCreateUpdate(report, SAVE_REPORT);
+        log.info(report.toString());
+        try (Connection connection = ManagerDB.getInstance().getConnection()) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(SAVE_REPORT)) {
+                int k = 0;
+                preparedStatement.setString(++k, report.getComment());
+                preparedStatement.setInt(++k, report.getIncome());
+                preparedStatement.setInt(++k, report.getStatus().ordinal() + 1);
+               // preparedStatement.setDate(++k, report.getReportDate());
+                preparedStatement.setInt(++k, report.getTaxPeriod().ordinal() + 1);
+                preparedStatement.setInt(++k, report.getTaxRate());
+                preparedStatement.setInt(++k, report.getYear());
+                preparedStatement.setLong(++k, report.getUserId());
+
+                log.info(preparedStatement.toString());
+                preparedStatement.execute();
+                connection.commit();
+            } catch (SQLException ex) {
+                connection.rollback();
+                ex.printStackTrace();
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return report;
     }
 
     @Override
     public Report update(Report report) {
-        return setValuesCreateUpdate(report, UPDATE_REPORT);
-    }
-
-    private Report setValuesCreateUpdate(Report report, String updateReport) {
         try (Connection connection = ManagerDB.getInstance().getConnection()) {
-            try (PreparedStatement preparedStatement = connection.prepareStatement(updateReport)) {
+            try (PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_REPORT)) {
                 int k = 0;
                 preparedStatement.setString(++k, report.getComment());
                 preparedStatement.setInt(++k, report.getIncome());
                 preparedStatement.setInt(++k, report.getStatus().ordinal());
-                preparedStatement.setDate(++k, report.getReportDate());
+                //preparedStatement.setDate(++k, report.getReportDate());
                 preparedStatement.setInt(++k, report.getTaxPeriod().ordinal());
                 preparedStatement.setInt(++k, report.getTaxRate());
                 preparedStatement.setInt(++k, report.getYear());
@@ -153,7 +172,6 @@ public class MySQLReportDAOImpl implements ReportDAO {
 
         String query = FIND_BY_PARAM_WITH_USER + sortBy;
 
-
         List<Report> reports = null;
         try (Connection connection = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = connection.prepareStatement(query)) {
@@ -167,6 +185,7 @@ public class MySQLReportDAOImpl implements ReportDAO {
                 statement.setInt(7, status.ordinal() + 1);
                 statement.setInt(8, status.ordinal() + 1);
 
+                log.info(statement.toString());
                 ResultSet resultSet = statement.executeQuery();
 
                 reports = new ArrayList<>();

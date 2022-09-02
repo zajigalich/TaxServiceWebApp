@@ -43,12 +43,17 @@ public class ReportService {
 
         reportList = reportDAO.findByParam(id, reportDate, period, status, sortField);
 
-        if (reportList == null || reportList.isEmpty())
-            throw new ReportsNotFoundException("No reports found");
+        log.info(reportList.toString());
 
-        return reportList.stream()
+        if (reportList == null || reportList.isEmpty()) {
+            throw new ReportsNotFoundException("No reports found");
+        }
+
+        List<ReportDTO> collect = reportList.stream()
                 .map(EntityDTOUtil::convertReportEntityToDTO)
                 .collect(Collectors.toList());
+        log.info(collect.toString());
+        return collect;
     }
 
     public ReportDTO getReportById(Long reportId) {
@@ -69,9 +74,9 @@ public class ReportService {
 
     public Report applyNewReport(ReportDTO report) {
 
-        log.info(report.toString());
         report.setStatus(String.valueOf(ReportStatus.PROCESSING));
         report.setReportDate(Date.valueOf(LocalDate.now()));
+        log.info(report.toString());
 
         return reportDAO.create(EntityDTOUtil.convertReportDTOToEntity(report));
     }

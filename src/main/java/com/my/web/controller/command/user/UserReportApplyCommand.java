@@ -5,11 +5,13 @@ import com.my.service.ReportService;
 import com.my.web.controller.command.Command;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.ReportFormError;
+import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 
 public class UserReportApplyCommand implements Command {
     private final ReportService reportService = ReportService.getInstance();
+    private static final Logger log = Logger.getLogger(UserReportApplyCommand.class);
 
     @Override
     public String execute(HttpServletRequest request) {
@@ -34,6 +36,8 @@ public class UserReportApplyCommand implements Command {
             request.setAttribute("fields", formError);
             return "/WEB-INF/user/report-form";
         }
+
+        log.info("post apply");
 
         ReportDTO report = (ReportDTO) request.getAttribute("reportDTO");
         User user = (User) request.getSession().getAttribute("user");

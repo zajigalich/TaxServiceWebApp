@@ -10378,3 +10378,269 @@
 2022-09-01 22:23:53 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
 2022-09-01 22:24:21 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
 2022-09-01 22:24:21 ERROR FrontControllerServlet:80 - Exception No enum constant com.my.persistence.entity.TaxPeriod.First period
+2022-09-01 22:33:16 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 22:33:16 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-01 22:35:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 22:35:19 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-01 22:35:19 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-01 22:35:20 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-01 22:35:20 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-01 22:35:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@70d29e73
+2022-09-01 22:35:26 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 22:35:37 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 22:35:37 INFO  UserReportApplyCommand:40 - post apply
+2022-09-01 22:35:37 ERROR FrontControllerServlet:80 - Exception No enum constant com.my.persistence.entity.TaxPeriod.Second period
+2022-09-01 22:37:51 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 22:37:51 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-01 22:37:58 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 22:37:58 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-01 22:37:58 INFO  LoginCommand:33 - Login process with data: a@a.a, 123456
+2022-09-01 22:37:59 INFO  UserService:33 - Validation login data for input: a@a.a, 123456
+2022-09-01 22:37:59 INFO  LoginCommand:39 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-08-27, tin='00000000', address='Home'}
+2022-09-01 22:37:59 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-09-01 22:38:05 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.inspector.InspectorStatisticCommand@62e903c2
+2022-09-01 22:46:08 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 22:46:08 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-01 22:46:08 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-01 22:46:08 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-01 22:46:08 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-01 22:46:08 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@34e47a4d
+2022-09-01 22:46:11 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 22:46:20 INFO  ReportFormFilter:48 - creating dto
+2022-09-01 22:46:20 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 22:46:20 INFO  UserReportApplyCommand:40 - post apply
+2022-09-01 22:46:20 ERROR FrontControllerServlet:80 - Exception No enum constant com.my.persistence.entity.TaxPeriod.First period
+2022-09-01 23:24:05 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 23:24:05 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-01 23:24:43 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 23:24:43 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-01 23:24:43 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-01 23:24:44 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-01 23:24:44 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-01 23:24:44 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@792d569
+2022-09-01 23:24:47 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 23:24:57 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-01 23:24:57 INFO  ReportFormFilter:53 - creating dto
+2022-09-01 23:24:57 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 23:24:57 INFO  UserReportApplyCommand:40 - post apply
+2022-09-01 23:24:57 ERROR FrontControllerServlet:80 - Exception No enum constant com.my.persistence.entity.TaxPeriod.First period
+2022-09-01 23:46:17 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 23:46:17 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-01 23:46:25 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-01 23:46:25 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-01 23:46:25 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-01 23:46:26 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-01 23:46:26 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-01 23:46:26 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@62e903c2
+2022-09-01 23:46:33 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 23:46:56 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-01 23:46:56 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='First period', year=2020, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-09-01 23:46:56 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-01 23:46:56 INFO  UserReportApplyCommand:40 - post apply
+2022-09-01 23:46:56 ERROR FrontControllerServlet:80 - Exception No enum constant com.my.persistence.entity.TaxPeriod.First period
+2022-09-02 00:02:06 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:02:06 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:02:12 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:02:12 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:02:12 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:02:12 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:02:12 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:02:12 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@56713e9e
+2022-09-02 00:02:16 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:02:28 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-02 00:02:28 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='FIRST_PERIOD', year=2020, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-09-02 00:02:28 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:02:28 INFO  UserReportApplyCommand:40 - post apply
+2022-09-02 00:02:28 INFO  ReportMapperImpl:64 - creating report
+2022-09-02 00:02:28 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@56713e9e
+2022-09-02 00:02:35 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@56713e9e
+2022-09-02 00:02:36 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@56713e9e
+2022-09-02 00:09:34 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:09:34 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:09:41 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:09:41 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:09:41 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:09:41 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:09:41 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:09:41 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:09:46 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:09:47 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:09:59 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-02 00:09:59 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='FIRST_PERIOD', year=2020, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-09-02 00:09:59 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:09:59 INFO  UserReportApplyCommand:40 - post apply
+2022-09-02 00:09:59 INFO  EntityDTOUtil:62 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='FIRST_PERIOD', year=2020, reportDate=2022-09-02, status='PROCESSING', comment='null', userId=3, userDTO=null}
+2022-09-02 00:09:59 INFO  ReportMapperImpl:64 - creating report
+2022-09-02 00:09:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:20:33 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:20:33 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:20:53 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:20:53 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:20:53 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:20:53 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:20:53 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:20:53 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@6749e575
+2022-09-02 00:20:59 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:21:22 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-02 00:21:22 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='FIRST_PERIOD', year=2020, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-09-02 00:21:22 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:21:22 INFO  UserReportApplyCommand:40 - post apply
+2022-09-02 00:21:22 INFO  ReportMapperImpl:64 - creating report
+2022-09-02 00:21:22 INFO  ReportMapperImpl:65 - Report{id=null, userId=3, income=2000, taxPeriod=FIRST_PERIOD, taxRate=7, reportDate=2022-09-02, year=2020, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-02 00:21:22 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@6749e575
+2022-09-02 00:21:24 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@6749e575
+2022-09-02 00:23:30 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:23:30 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:23:40 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:23:40 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:23:40 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:23:40 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:23:40 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:23:40 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:23:43 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:23:53 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-02 00:23:53 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='FIRST_PERIOD', year=2020, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-09-02 00:23:53 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:23:53 INFO  UserReportApplyCommand:40 - post apply
+2022-09-02 00:23:53 INFO  ReportMapperImpl:64 - creating report
+2022-09-02 00:23:53 INFO  ReportMapperImpl:65 - Report{id=null, userId=3, income=2000, taxPeriod=FIRST_PERIOD, taxRate=7, reportDate=2022-09-02, year=2020, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-02 00:23:53 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:23:55 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:25:18 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:25:18 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:25:30 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:25:30 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:25:30 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:25:30 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:25:30 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:25:30 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:25:37 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:25:51 INFO  ReportFormFilter:34 - report: 2000, 7, FIRST_PERIOD, 2020
+2022-09-02 00:25:51 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=7, taxPeriod='FIRST_PERIOD', year=2020, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-09-02 00:25:51 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:25:51 INFO  UserReportApplyCommand:40 - post apply
+2022-09-02 00:25:51 INFO  ReportMapperImpl:64 - creating report
+2022-09-02 00:25:51 INFO  ReportMapperImpl:65 - Report{id=null, userId=3, income=2000, taxPeriod=FIRST_PERIOD, taxRate=7, reportDate=2022-09-02, year=2020, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-02 00:25:51 INFO  ReportMapperImpl:78 - com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO report (comment, income, status_id, period_id, tax_rate, year, user_id) values (** BYTE ARRAY DATA **, 2000, 1, 1, 7, 2020, 3);
+2022-09-02 00:25:51 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:29:50 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:36:48 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:36:49 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:36:56 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@5ed5ad41
+2022-09-02 00:37:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:37:28 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:37:38 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:37:46 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 00:37:52 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserReportsCommand@2ad4c6ba
+2022-09-02 00:49:38 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:49:38 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:49:47 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:49:47 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:49:47 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:49:48 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:49:48 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:49:48 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 00:50:06 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 00:51:14 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:51:14 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:51:23 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:51:23 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:51:23 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:51:23 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:51:23 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:51:23 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 00:51:23 INFO  UserReportsCommand:34 - user rep params3, null, null, null, null, 
+2022-09-02 00:51:23 ERROR FrontControllerServlet:80 - Exception Cannot invoke "com.my.persistence.entity.TaxPeriod.ordinal()" because "period" is null
+2022-09-02 00:57:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:57:19 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 00:57:26 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 00:57:26 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 00:57:26 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 00:57:27 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 00:57:27 INFO  LoginCommand:39 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 00:57:27 INFO  ParameterFilter:32 - set paramsnull, null, null, null
+2022-09-02 00:57:27 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 00:57:27 INFO  UserReportsCommand:34 - user rep params3, null, null, null, null, 
+2022-09-02 00:57:27 ERROR FrontControllerServlet:80 - Exception Cannot invoke "com.my.persistence.entity.TaxPeriod.ordinal()" because "period" is null
+2022-09-02 01:02:22 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:02:22 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 01:02:29 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:02:29 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 01:02:29 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 01:02:29 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 01:02:29 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 01:02:29 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:02:29 INFO  UserReportsCommand:27 - GET
+2022-09-02 01:02:29 INFO  UserReportsCommand:35 - user rep params  3, null, null, null, null, 
+2022-09-02 01:02:29 ERROR FrontControllerServlet:80 - Exception Cannot invoke "com.my.persistence.entity.TaxPeriod.ordinal()" because "period" is null
+2022-09-02 01:05:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:05:19 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 01:05:26 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:05:26 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 01:05:26 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 01:05:26 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 01:05:26 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 01:05:26 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:05:26 INFO  UserReportsCommand:27 - GET
+2022-09-02 01:05:26 INFO  UserReportsCommand:35 - user rep params  3, null, null, null, null, 
+2022-09-02 01:05:26 ERROR FrontControllerServlet:80 - Exception Cannot invoke "com.my.persistence.entity.TaxPeriod.ordinal()" because "period" is null
+2022-09-02 01:12:11 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:12:11 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 01:12:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:12:19 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 01:12:19 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 01:12:19 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 01:12:19 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 01:12:19 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:12:19 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:12:19 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:12:19 INFO  UserReportsCommand:27 - GET
+2022-09-02 01:12:19 INFO  UserReportsCommand:35 - user rep params  3, null, null, null, null, 
+2022-09-02 01:12:19 ERROR FrontControllerServlet:80 - Exception Cannot invoke "com.my.persistence.entity.TaxPeriod.ordinal()" because "period" is null
+2022-09-02 01:15:37 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:15:37 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 01:15:45 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:15:45 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 01:15:45 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 01:15:46 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 01:15:46 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 01:15:46 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:15:46 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:15:46 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:15:46 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:15:52 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-02 01:15:54 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:15:54 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:15:54 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:15:54 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:15:55 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:15:55 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:15:55 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:15:55 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:15:56 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:15:56 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:15:56 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:15:56 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:15:57 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:15:57 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:15:57 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:15:57 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:15:57 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:15:57 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:15:57 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:15:57 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:16:03 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:16:03 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:16:03 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:16:03 DEBUG UserReportsCommand:23 - /user/reports
+2022-09-02 01:18:07 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:18:07 DEBUG LoginCommand:22 - Login request  /login  GET
+2022-09-02 01:18:14 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-02 01:18:14 DEBUG LoginCommand:22 - Login request  /login  POST
+2022-09-02 01:18:14 INFO  LoginCommand:33 - Login process with data: u@u.u, 123456
+2022-09-02 01:18:15 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-02 01:18:15 INFO  LoginCommand:38 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-08-27, tin='00000001', address='Home'}
+2022-09-02 01:18:15 INFO  ParameterFilter:27 - filt works
+2022-09-02 01:18:15 INFO  ParameterFilter:34 - set paramsnull, null, null, null
+2022-09-02 01:18:15 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-02 01:18:15 DEBUG UserReportsCommand:23 - /user/reports  GET

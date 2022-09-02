@@ -3,6 +3,7 @@ package com.my.web.filter;
 import com.my.persistence.entity.ReportStatus;
 import com.my.persistence.entity.TaxPeriod;
 import com.my.web.dto.SortField;
+import org.apache.log4j.Logger;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -13,6 +14,8 @@ import java.sql.Date;
 
 @WebFilter(value = {"/user/reports", "/inspector/reports"})
 public class ParameterFilter implements Filter {
+
+    private static final Logger log = Logger.getLogger(ParameterFilter.class);
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
@@ -46,6 +49,8 @@ public class ParameterFilter implements Filter {
         request.setAttribute("period", session.getAttribute("period"));
         request.setAttribute("status", session.getAttribute("status"));
         request.setAttribute("sortBy", session.getAttribute("sortBy"));
+
+
 
         filterChain.doFilter(servletRequest, servletResponse);
     }

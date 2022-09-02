@@ -6,8 +6,11 @@ import com.my.persistence.entity.TaxPeriod;
 import com.my.persistence.entity.User;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.UserDTO;
+import org.apache.log4j.Logger;
 
 public class EntityDTOUtil {
+
+    private static final Logger log = Logger.getLogger(EntityDTOUtil.class);
 
     private EntityDTOUtil() {}
 

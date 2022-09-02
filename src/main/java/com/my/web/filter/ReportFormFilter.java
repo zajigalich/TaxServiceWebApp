@@ -1,8 +1,10 @@
 package com.my.web.filter;
 
 import com.my.persistence.entity.TaxPeriod;
+import com.my.web.controller.command.user.UserReportApplyCommand;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.ReportFormError;
+import org.apache.log4j.Logger;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -12,6 +14,8 @@ import java.util.regex.Pattern;
 
 @WebFilter(value = {"/user/report-form", "/user/report-edit"})
 public class ReportFormFilter implements Filter {
+
+    private static final Logger log = Logger.getLogger(ReportFormFilter.class);
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
@@ -25,6 +29,9 @@ public class ReportFormFilter implements Filter {
             String taxRate = request.getParameter("taxRate");
             String period = request.getParameter("period");
             String year = request.getParameter("year");
+
+
+            log.info("report: " + income + ", " + taxRate + ", "+ period + ", "+ year);
 
             ReportFormError reportFormError = new ReportFormError();
 
@@ -41,14 +48,13 @@ public class ReportFormFilter implements Filter {
                 reportFormError.setYearInvalid(true);
 
             if (!reportFormError.hasErrors()) {
-
                 ReportDTO reportDTO = ReportDTO.builder()
                         .income(Integer.valueOf(income))
                         .taxRate(Integer.valueOf(taxRate))
                         .taxPeriod(TaxPeriod.valueOf(period))
                         .year(Integer.valueOf(year))
                         .build();
-
+                log.info(reportDTO);
                 request.setAttribute("reportDTO", reportDTO);
             }
 
@@ -57,4 +63,5 @@ public class ReportFormFilter implements Filter {
 
         filterChain.doFilter(servletRequest, servletResponse);
     }
+
 }

@@ -43,7 +43,7 @@ public class ReportDTO {
         }
 
         public ReportDTO.Builder taxPeriod(TaxPeriod taxPeriod) {
-            this.report.setTaxPeriod(taxPeriod.getPeriod());
+            this.report.setTaxPeriod(taxPeriod.name());
             return this;
         }
 
@@ -68,7 +68,7 @@ public class ReportDTO {
         }
 
         public ReportDTO.Builder status(ReportStatus status) {
-            this.report.setStatus(status.getStatusName());
+            this.report.setStatus(status.name());
             return this;
         }
 

@@ -23,7 +23,7 @@ public class  InspectorReportsCommand implements Command {
     @Override
     public String execute(HttpServletRequest request) {
 
-        if (request.getMethod().equals("POST")) {
+        if (request.getMethod().equals("GET")) {
             return reportsGet(request);
         }
 
@@ -31,7 +31,7 @@ public class  InspectorReportsCommand implements Command {
     }
 
     public String reportsGet(HttpServletRequest request) {
-
+        log.debug(request.getRequestURI());
         log.info("Request attributes: " + request.getAttribute("userId") + ", "
                 + ", " + request.getAttribute("date") + ", " + request.getAttribute("period") + ", "
                 + request.getAttribute("status") + ", " + request.getAttribute("sortBy"));
