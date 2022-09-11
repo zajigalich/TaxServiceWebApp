@@ -71,8 +71,9 @@ public class MySQLUserDAOImpl implements UserDAO {
         User user = null;
         try (Connection con = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = con.prepareStatement(FIND_BY_ID)) {
+
                 statement.setLong(1, id);
-                ResultSet resultSet = statement.getResultSet();
+                ResultSet resultSet = statement.executeQuery();
                 if (resultSet.next()) {
                     user = mapper.extractFromResultSet(resultSet);
                 }

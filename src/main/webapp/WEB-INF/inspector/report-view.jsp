@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" language="java" %>
+<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
@@ -31,11 +31,11 @@
             </tr>
             <tr>
                 <td><b><fmt:message key="user.info.tin"/></b></td>
-                <td><span>${report.userDTO.ipn}</span></td>
+                <td><span>${report.userDTO.tin}</span></td>
             </tr>
             <tr>
                 <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
-                <td><span><fmt:message key="user.data.entrepreneur.name.${sessionScope.user.personality}"/></span></td>
+                <td><span><fmt:message key="user.data.entrepreneur.name.${report.userDTO.type}"/></span></td>
             </tr>
             <tr>
                 <td><p><fmt:message key="report.data.col.income"/>, $</p></td>

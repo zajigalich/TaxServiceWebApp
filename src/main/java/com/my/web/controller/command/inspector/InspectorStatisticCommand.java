@@ -13,6 +13,7 @@ public class InspectorStatisticCommand implements Command {
     public String execute(HttpServletRequest request) {
 
         request.setAttribute("statisticData", inspectorService.getStatisticData());
+        //request.getSession().setAttribute("statisticData", inspectorService.getStatisticData());
 
         return "/WEB-INF/inspector/statistic";
     }

@@ -1,12 +1,18 @@
 package com.my.web.filter;
 
+import org.apache.log4j.Logger;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Map;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @WebFilter(urlPatterns = "/registration")
 public class RegistrationFilter implements Filter {
+
+    private static final Logger log = Logger.getLogger(RegistrationFilter.class);
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain)
@@ -23,7 +29,12 @@ public class RegistrationFilter implements Filter {
         if (isParamCorrect.get())
             filterChain.doFilter(servletRequest, servletResponse);
         else {
-            servletRequest.getParameterMap().forEach(servletRequest::setAttribute);
+            for (Map.Entry<String, String[]> entry : servletRequest.getParameterMap().entrySet()) {
+                log.info(entry.getKey() + ", " + Arrays.toString(entry.getValue()));
+                String key = entry.getKey();
+                String[] value = entry.getValue();
+                servletRequest.setAttribute(key, value);
+            }
             servletRequest.getRequestDispatcher("/registration.jsp").forward(servletRequest, servletResponse);
         }
     }

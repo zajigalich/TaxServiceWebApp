@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class InspectorUserViewCommand implements Command {
 
-    private static final Logger log = Logger.getLogger(InspectorReportsCommand.class);
+    private static final Logger log = Logger.getLogger(InspectorUserViewCommand.class);
 
     private final UserService userService = UserService.getInstance();
 

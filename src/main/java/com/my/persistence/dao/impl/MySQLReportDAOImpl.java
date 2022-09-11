@@ -8,16 +8,19 @@ import com.my.persistence.dao.mapper.impl.ReportMapperImpl;
 import com.my.persistence.entity.Report;
 import com.my.persistence.entity.ReportStatus;
 import com.my.persistence.entity.TaxPeriod;
+import com.my.persistence.entity.User;
 import com.my.web.dto.SortField;
 import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class MySQLReportDAOImpl implements ReportDAO {
 
-    private final static Logger log = Logger.getLogger(ReportMapperImpl.class);
+    private final static Logger log = Logger.getLogger(MySQLReportDAOImpl.class);
 
     private final static ObjectMapper<Report> mapper = new ReportMapperImpl();
 
@@ -41,8 +44,8 @@ public class MySQLReportDAOImpl implements ReportDAO {
             + "FROM ( SELECT r.* FROM report r "
             + "WHERE r.user_id = (IF(? IS NULL, r.user_id, ?))"
             + "AND r.report_date = (IF(? IS NULL, r.report_date, ?))"
-            + "AND r.period_id = (IF(? = 0, r.period_id, ?))"
-            + "AND r.status_id = (IF(? = 0, r.status_id, ?))"
+            + "AND r.period_id = (IF(? IS NULL, r.period_id, ?))"
+            + "AND r.status_id = (IF(? IS NULL, r.status_id, ?))"
             + ") rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY ";
 
     private final static String FIND_REPORT_BY_ID = "SELECT * FROM report WHERE id = ?";
@@ -55,6 +58,8 @@ public class MySQLReportDAOImpl implements ReportDAO {
 
     private static final String STATISTIC_REPORTS_COUNT_QUERY = "SELECT COUNT(*) as count " +
             "FROM report r group by r.year order by r.year;";
+
+    private static final String FIND_ALL_REPORTS = "SELECT * FROM report";
 
     MySQLReportDAOImpl() {
     }
@@ -69,7 +74,7 @@ public class MySQLReportDAOImpl implements ReportDAO {
                 preparedStatement.setString(++k, report.getComment());
                 preparedStatement.setInt(++k, report.getIncome());
                 preparedStatement.setInt(++k, report.getStatus().ordinal() + 1);
-               // preparedStatement.setDate(++k, report.getReportDate());
+                // preparedStatement.setDate(++k, report.getReportDate());
                 preparedStatement.setInt(++k, report.getTaxPeriod().ordinal() + 1);
                 preparedStatement.setInt(++k, report.getTaxRate());
                 preparedStatement.setInt(++k, report.getYear());
@@ -161,12 +166,37 @@ public class MySQLReportDAOImpl implements ReportDAO {
     }
 
     @Override
-    public Collection<Report> findAll() {
-        return null;
+    public List<Report> findAll() {
+
+        List<Report> reports = null;
+        try (Connection connection = ManagerDB.getInstance().getConnection()) {
+            try (PreparedStatement statement = connection.prepareStatement(FIND_ALL_REPORTS)) {
+
+                ResultSet resultSet = statement.executeQuery();
+
+                reports = new ArrayList<>();
+                while (resultSet.next()) {
+                    Report report = mapper.extractFromResultSet(resultSet);
+                    //report.setUser(UserMapperImpl.extractUserFromResultSetForReport(resultSet));
+                    reports.add(report);
+
+                }
+                resultSet.close();
+                connection.commit();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return reports;
     }
 
     @Override
     public List<Report> findByParamWithUser(Long id, Date reportDate, TaxPeriod period, ReportStatus status, SortField sortField) {
+
+        log.info("findByParamWithUser work");
 
         String sortBy = sortField == null ? "r.id " : sortField.fieldInTable + " " + sortField.direction;
 
@@ -175,15 +205,35 @@ public class MySQLReportDAOImpl implements ReportDAO {
         List<Report> reports = null;
         try (Connection connection = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = connection.prepareStatement(query)) {
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
-                statement.setLong(1, id);
-                statement.setLong(2, id);
-                statement.setDate(3, reportDate);
-                statement.setDate(4, reportDate);
-                statement.setInt(5, period.ordinal() + 1);
-                statement.setInt(6, period.ordinal() + 1);
-                statement.setInt(7, status.ordinal() + 1);
-                statement.setInt(8, status.ordinal() + 1);
+                statement.setObject(1, id, Types.BIGINT);
+                statement.setObject(2, id, Types.BIGINT);
+
+                if (reportDate == null){
+                    statement.setNull(3, Types.DATE);
+                    statement.setNull(4, Types.DATE);
+                } else {
+                    statement.setDate(3, reportDate);
+                    statement.setDate(4, reportDate);
+                }
+
+                if (period == null) {
+                    statement.setNull(5, java.sql.Types.INTEGER);
+                    statement.setNull(6, java.sql.Types.INTEGER);
+                } else {
+                    statement.setInt(5, period.ordinal() + 1);
+                    statement.setInt(6, period.ordinal() + 1);
+                }
+
+                if (status == null) {
+                    statement.setNull(7, java.sql.Types.INTEGER);
+                    statement.setNull(8, java.sql.Types.INTEGER);
+                } else {
+                    statement.setInt(7, status.ordinal() + 1);
+                    statement.setInt(8, status.ordinal() + 1);
+                }
+
 
                 log.info(statement.toString());
                 ResultSet resultSet = statement.executeQuery();
@@ -191,6 +241,8 @@ public class MySQLReportDAOImpl implements ReportDAO {
                 reports = new ArrayList<>();
                 while (resultSet.next()) {
                     Report report = mapper.extractFromResultSet(resultSet);
+                    User user = UserMapperImpl.extractUserFromResultSetForReport(resultSet);
+                    System.out.println(report + "\n" + user);
                     report.setUser(UserMapperImpl.extractUserFromResultSetForReport(resultSet));
                     reports.add(report);
 
@@ -208,7 +260,8 @@ public class MySQLReportDAOImpl implements ReportDAO {
     }
 
     @Override
-    public List<Report> findByParam(Long id, Date reportDate, TaxPeriod period, ReportStatus status, SortField sortField) {
+    public List<Report> findByParam(Long id, Date reportDate, TaxPeriod period, ReportStatus status, SortField
+            sortField) {
         String sortBy = sortField == null ? "r.id " : sortField.fieldInTable + " " + sortField.direction;
 
         String query = FIND_BY_PARAM + sortBy;

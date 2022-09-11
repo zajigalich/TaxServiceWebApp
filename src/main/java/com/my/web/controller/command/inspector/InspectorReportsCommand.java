@@ -6,15 +6,13 @@ import com.my.persistence.entity.ReportStatus;
 import com.my.persistence.entity.TaxPeriod;
 import com.my.service.InspectorService;
 import com.my.web.controller.command.Command;
-import com.my.web.controller.command.app.LoginCommand;
 import com.my.web.dto.SortField;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.sql.Date;
 
-public class  InspectorReportsCommand implements Command {
+public class InspectorReportsCommand implements Command {
 
     private final InspectorService inspectorService = InspectorService.getInstance();
 
@@ -23,25 +21,19 @@ public class  InspectorReportsCommand implements Command {
     @Override
     public String execute(HttpServletRequest request) {
 
-        if (request.getMethod().equals("GET")) {
-            return reportsGet(request);
-        }
-
-        return "/WEB-INF/inspector/reports";
-    }
-
-    public String reportsGet(HttpServletRequest request) {
         log.debug(request.getRequestURI());
         log.info("Request attributes: " + request.getAttribute("userId") + ", "
                 + ", " + request.getAttribute("date") + ", " + request.getAttribute("period") + ", "
                 + request.getAttribute("status") + ", " + request.getAttribute("sortBy"));
 
         Long id = (Long) request.getAttribute("userId");
+        //Long id = null;
         Date date = (Date) request.getAttribute("date");
         TaxPeriod period = (TaxPeriod) request.getAttribute("period");
         ReportStatus status = (ReportStatus) request.getAttribute("status");
         SortField sortBy = (SortField) request.getAttribute("sortBy");
 
+        //log.info(""+ id + date + period + status);
         try {
             request.setAttribute("reports", inspectorService
                     .getReportsByFilterParam(id, date, period, status, sortBy));

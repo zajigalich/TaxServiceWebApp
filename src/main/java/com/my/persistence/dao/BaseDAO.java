@@ -3,6 +3,7 @@ package com.my.persistence.dao;
 import com.my.persistence.entity.AbstractBaseEntity;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 public interface BaseDAO <E extends AbstractBaseEntity>{
@@ -10,5 +11,5 @@ public interface BaseDAO <E extends AbstractBaseEntity>{
     E update(E entity);
     boolean delete(Long id);
     Optional<E> findById(Long id);
-    Collection<E> findAll();
+    List<E> findAll();
 }

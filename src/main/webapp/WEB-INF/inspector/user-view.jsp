@@ -1,8 +1,8 @@
-<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
-<fmt:setBundle basename="message"/>
+<fmt:setBundle basename="messages"/>
 <html>
 <head>
 
@@ -57,14 +57,10 @@
             <td><span>${requestScope.userDTO.dateOfRegistration}</span></td>
         </tr>
         <tr>
-            <td><b><fmt:message key="user.info.tin"/></b></td>
-            <td><span>${requestScope.userDTO.ipn}</span></td>
-        </tr>
-        <tr>
             <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
             <td>
                 <span>
-                    <fmt:message key="user.data.entrepreneur.name.${requestScope.userDTO.personality}"/>
+                    <fmt:message key="user.data.entrepreneur.name.${requestScope.userDTO.type}"/>
                 </span>
             </td>
         </tr>

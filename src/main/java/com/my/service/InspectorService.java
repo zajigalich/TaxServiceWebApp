@@ -12,6 +12,7 @@ import com.my.web.EntityDTOUtil;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.SortField;
 import com.my.web.dto.StatisticDTO;
+import org.apache.log4j.Logger;
 
 import java.sql.Date;
 import java.util.List;
@@ -22,6 +23,8 @@ public class InspectorService {
 
     private final ReportDAO reportDao = DAOFactory.getReportDaoInstance();
     private final UserDAO userDao = DAOFactory.getUserDaoInstance();
+
+    private static final Logger log = Logger.getLogger(InspectorService.class);
 
     private static InspectorService inspectorService;
 
@@ -37,7 +40,23 @@ public class InspectorService {
 
         List<Report> reportList;
 
+        log.info("service working..");
         reportList = reportDao.findByParamWithUser(id, reportDate, period, status, sortField);
+
+        if (reportList == null || reportList.isEmpty())
+            throw new ReportsNotFoundException("No reports found");
+
+        log.info("service finished");
+
+        return reportList.stream()
+                .map(EntityDTOUtil::convertReportEntityToDTO)
+                .collect(Collectors.toList());
+    }
+
+    public List<ReportDTO> getReports() {
+        List<Report> reportList;
+
+        reportList = reportDao.findAll();
 
         if (reportList == null || reportList.isEmpty())
             throw new ReportsNotFoundException("No reports found");

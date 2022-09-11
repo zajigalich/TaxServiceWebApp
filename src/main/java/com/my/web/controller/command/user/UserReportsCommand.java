@@ -22,20 +22,22 @@ public class UserReportsCommand implements Command {
     public String execute(HttpServletRequest request) {
         log.debug(request.getRequestURI() + "  " + request.getMethod());
 
-        Long id = ((User) request.getSession().getAttribute("user")).getId();
-        Date date = (Date) request.getAttribute("date");
-        TaxPeriod period = (TaxPeriod) request.getAttribute("period");
-        ReportStatus status = (ReportStatus) request.getAttribute("status");
-        SortField sortBy = (SortField) request.getAttribute("sortBy");
+        if (request.getMethod().equalsIgnoreCase("POST")) {
+            Long id = ((User) request.getSession().getAttribute("user")).getId();
+            Date date = (Date) request.getAttribute("date");
+            TaxPeriod period = (TaxPeriod) request.getAttribute("period");
+            ReportStatus status = (ReportStatus) request.getAttribute("status");
+            SortField sortBy = (SortField) request.getAttribute("sortBy");
 
-        log.info("user rep params  " + id + ", " + date + ", " + period + ", " + status + ", " + sortBy + ", ");
-        try {
-            request.setAttribute("reports",
-                    reportService.getReportsByFilterParam(id, date, period, status, sortBy));
-        } catch (ReportsNotFoundException e) {
-            request.setAttribute("noReportsFoundException", e.getMessage());
+            log.info("user rep params  " + id + ", " + date + ", " + period + ", " + status + ", " + sortBy + ", ");
+            try {
+                request.setAttribute("reports",
+                        reportService.getReportsByFilterParam(id, date, period, status, sortBy));
+            } catch (ReportsNotFoundException e) {
+                request.setAttribute("noReportsFoundException", e.getMessage());
+            }
+
         }
-
         return "/WEB-INF/user/reports";
     }
 

@@ -54,4 +54,9 @@ public class InspectorReportViewCommand implements Command {
         }
         return "/WEB-INF/inspector/report-view";
     }
+
+    @Override
+    public String toString() {
+        return "InspectorReportViewCommand";
+    }
 }

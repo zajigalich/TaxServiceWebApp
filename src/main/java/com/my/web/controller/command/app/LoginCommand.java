@@ -34,6 +34,9 @@ public class LoginCommand implements Command {
 
         try {
             User user = UserService.getInstance().validateLoginData(email, password);
+
+            //session.setAttribute("userId", user.getId());
+
             session.setAttribute("user", user);
             log.info("User logged in + " + user);
 

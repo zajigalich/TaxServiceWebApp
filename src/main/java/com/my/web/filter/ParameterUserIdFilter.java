@@ -1,5 +1,6 @@
 package com.my.web.filter;
 
+import com.my.persistence.entity.User;
 import org.apache.log4j.Logger;
 
 import javax.servlet.*;
@@ -22,13 +23,17 @@ public class ParameterUserIdFilter implements Filter {
 
         String idParam = request.getParameter("userId");
 
+        log.info(idParam);
 
         if (idParam != null) {
             session.setAttribute("userId", idParam.isEmpty() ? null : Long.valueOf(idParam));
+
         }
 
         request.setAttribute("userId", session.getAttribute("userId"));
 
         filterChain.doFilter(servletRequest, servletResponse);
     }
+
+
 }
