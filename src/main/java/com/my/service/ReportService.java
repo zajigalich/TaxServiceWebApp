@@ -43,7 +43,7 @@ public class ReportService {
 
         reportList = reportDAO.findByParam(id, reportDate, period, status, sortField);
 
-        log.info(reportList.toString());
+        //log.info(reportList.toString());
 
         if (reportList == null || reportList.isEmpty()) {
             throw new ReportsNotFoundException("No reports found");

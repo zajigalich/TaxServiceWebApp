@@ -43,16 +43,10 @@
             <td><span>${sessionScope.user.tin}</span></td>
         </tr>
 
-        <%--<tr>
+        <tr>
             <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
-            <td><span><fmt:message key="user.data.entrepreneur.name.${sessionScope.user.type}"/></span></td>
-        </tr>--%>
-
-
-        <%--<tr>
-            <td><b><fmt:message key="user.info.entrepreneur"/></b></td>
-            <td><span>${sessionScope.user.type}</span></td>
-        </tr>--%>
+            <td><span><fmt:message key="user.data.entrepreneur.name.${requestScope.userDTO.type}"/></span></td>
+        </tr>
 
         <tr>
             <td><b><fmt:message key="user.info.address"/></b></td>

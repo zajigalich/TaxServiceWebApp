@@ -111,7 +111,7 @@
                     <td><span><c:out value="${report.year}"/></span></td>
                     <td><span><fmt:message key="reports.period.${report.taxPeriod}"/></span></td>
                     <td>
-                        <c:if test="${report.comment != null}">
+                        <c:if test="${report.comment != null && !report.comment.isEmpty()}">
                         <span><fmt:message key="report.has.comment"/></span>
                         </c:if>
                     <td><span><fmt:message key="reports.status.${report.status}"/></span></td>

@@ -32,11 +32,23 @@ public class UserMapperImpl implements ObjectMapper<User> {
     }
 
     public static User extractUserFromResultSetForReport(ResultSet resultSet) throws SQLException {
-        return User.builder()
+        /*return User.builder()
                 .id(resultSet.getLong(REPORT_USER_ID.getField()))
                 .name(resultSet.getString(USER_INFO_NAME.getField()))
                 .lastName(resultSet.getString(USER_INFO_LASTNAME.getField()))
                 .tin(resultSet.getString(USER_TIN.getField()))
+                .build();*/
+        return User.builder()
+                .id(resultSet.getLong(ENTITY_ID.getField()))
+                .name(resultSet.getString(USER_INFO_NAME.getField()))
+                .userRole(UserRole.values()[resultSet.getInt(USER_ROLE_ID.getField()) - 1])
+                .entrepreneurType(EntrepreneurType.values()[resultSet.getInt(USER_ENTREPRENEUR_TYPE_ID.getField()) - 1])
+                .lastName(resultSet.getString(USER_INFO_LASTNAME.getField()))
+                .email(resultSet.getString(USER_INFO_EMAIL.getField()))
+                .password(resultSet.getString(USER_PASSWORD.getField()))
+                .address(resultSet.getString(USER_ADDRESS.getField()))
+                .tin(resultSet.getString(USER_TIN.getField()))
+                .dateOfRegistration(resultSet.getDate(USER_REGISTRATION_TIME.getField()))
                 .build();
     }
 }

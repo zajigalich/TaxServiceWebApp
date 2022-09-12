@@ -26,10 +26,13 @@ public class MySQLUserDAOImpl implements UserDAO {
     private final static String CREATE_USER = "INSERT INTO user " +
             "(role_id, entrepreneur_type_id, name, lastname, email, password, tin, address ) " +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+
     private final static String FIND_BY_ID = "SELECT * FROM USER WHERE id = ?;";
+
     private final static String FIND_BY_EMAIL = "SELECT * FROM USER WHERE email = ?;";
     private static final String FIND_ALL_USERS = "SELECT * FROM user;";
-    private static final String STATISTIC_REPORTS_COUNT = "SELECT " + "SUM(IF(u.role_id = 'User', 1, 0)) AS user_count, " + "SUM(IF(u.role_id = 'Inspector', 1, 0)) AS inspector_count" + "       FROM user as u;";
+    private static final String STATISTIC_REPORTS_COUNT = "SELECT SUM(IF(u.role_id = 1, 1, 0)) AS user_count, "
+            + "SUM(IF(u.role_id = 2, 1, 0)) AS inspector_count FROM user as u;";
     private static final String GET_USER_BY_PASSWORD_AND_EMAIL = "SELECT * FROM user WHERE email=? AND password=?";
 
 
@@ -198,6 +201,7 @@ public class MySQLUserDAOImpl implements UserDAO {
 
         try (Connection con = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = con.prepareStatement(STATISTIC_REPORTS_COUNT)) {
+
                 ResultSet resultSet = statement.executeQuery();
 
                 if (resultSet.next()) {

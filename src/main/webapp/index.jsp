@@ -42,7 +42,7 @@
     </div>
 </nav>
 <div style="text-align: center;">
-<%--    <p><fmt:message key="main.greeting"/></p>--%>
+    <p><fmt:message key="main.greeting"/></p>
 </div>
 </body>
 </html>

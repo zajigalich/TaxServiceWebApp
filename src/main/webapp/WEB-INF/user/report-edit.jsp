@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" language="java" %>
+`<%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="com.my.persistence.entity.TaxPeriod" %>
@@ -22,6 +22,13 @@
                 <div style="text-align: center">
                     <h1><fmt:message key="user.report.form.edit.title"/></h1>
                 </div>
+
+                <div class="form-group">
+                    <label for="taxRate"><fmt:message key="user.report.comment"/>:<br/></label>
+                    ${sessionScope.reportById.comment}
+                </div>
+
+
                 <div>
                     <form action="${pageContext.request.contextPath}/user/report-edit" method="POST">
                         <div class="form-group">
@@ -61,10 +68,9 @@
                                 <option selected value=""><fmt:message key="reports.search.select.period"/></option>
                                 <c:forEach var="period" items="${TaxPeriod.values()}">
                                     <option label="<fmt:message key="reports.period.${period}"/>"
-                                            value="${period}"<c:if
-                                            test="${period == sessionScope.reportById.taxPeriod}">
-                                        selected </c:if>>
-                                        ..
+                                            value="${period}"
+                                            <c:if test="${period == param.get('period')}">selected </c:if>>
+                                        <fmt:message key="reports.period.${period.name()}"/>
                                     </option>
                                 </c:forEach>
                             </select>

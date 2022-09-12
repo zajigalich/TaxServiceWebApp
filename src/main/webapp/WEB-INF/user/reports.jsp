@@ -20,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col-11">
-            <form action="${pageContext.request.contextPath}/user/reports" method="POST">
+            <form action="${pageContext.request.contextPath}/user/reports" method="GET">
                 <input type="hidden" name="userId" value="${sessionScope.userId}"/>
 
                 <label for="date">
@@ -62,7 +62,7 @@
             </form>
         </div>
         <div class="col-1">
-            <form action="${pageContext.request.contextPath}/user/reports" method="POST">
+            <form action="${pageContext.request.contextPath}/user/reports" method="GET">
                 <input type="hidden" name="date" value=""/>
                 <input type="hidden" name="period" value=""/>
                 <input type="hidden" name="status" value=""/>
@@ -105,7 +105,7 @@
                     <td><span><c:out value="${report.year}"/></span></td>
                     <td><span><c:out value="${report.reportDate}"/></span></td>
                     <td>
-                        <c:if test="${report.comment != null}">
+                        <c:if test="${report.comment != null && !report.comment.isEmpty()}">
                         <span><fmt:message key="report.has.comment"/></span>
                         </c:if>
                     <td>

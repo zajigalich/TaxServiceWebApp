@@ -49,7 +49,7 @@ public class InspectorService {
         log.info("service finished");
 
         return reportList.stream()
-                .map(EntityDTOUtil::convertReportEntityToDTO)
+                .map(report -> EntityDTOUtil.convertReportEntityToDTO(report, report.getUser()))
                 .collect(Collectors.toList());
     }
 
@@ -73,6 +73,7 @@ public class InspectorService {
         Map<Integer, Long> statisticDataReportsPerYearCount = reportDao.getStatisticDataReportsPerYearCount();
 
         Map<String, Long> statisticDataUsersCountByRoles = userDao.getStatisticDataUsersCountByRoles();
+        log.info(statisticDataUsersCountByRoles.toString());
 
         return StatisticDTO.builder()
                 .countOfReports(statisticDataReportsCount.get("count"))
