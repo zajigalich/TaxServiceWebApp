@@ -10,6 +10,7 @@ import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 
 public class UserReportsCommand implements Command {
@@ -19,7 +20,7 @@ public class UserReportsCommand implements Command {
     private static final Logger log = Logger.getLogger(UserReportsCommand.class);
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         log.debug(request.getRequestURI() + "  " + request.getMethod());
 
         Long id = ((User) request.getSession().getAttribute("user")).getId();
@@ -28,7 +29,7 @@ public class UserReportsCommand implements Command {
         ReportStatus status = (ReportStatus) request.getAttribute("status");
         SortField sortBy = (SortField) request.getAttribute("sortBy");
 
-        log.info("user rep params  " + id + ", " + date + ", " + period + ", " + status + ", " + sortBy + ", ");
+        log.debug("user rep params  " + id + ", " + date + ", " + period + ", " + status + ", " + sortBy);
         try {
             request.setAttribute("reports",
                     reportService.getReportsByFilterParam(id, date, period, status, sortBy));

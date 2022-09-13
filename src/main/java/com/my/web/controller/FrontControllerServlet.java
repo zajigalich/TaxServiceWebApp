@@ -17,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 @WebServlet(value = "/", name = "FrontControllerServlet")
@@ -41,6 +40,7 @@ public class FrontControllerServlet extends HttpServlet {
         commands.put("user/report-form", new UserReportApplyCommand());
         commands.put("user/report-edit", new UserReportEditCommand());
         commands.put("user/report-delete", new UserReportDeleteCommand());
+        commands.put("user/report-save", new UserReportSaveJsonCommand());
 
         commands.put("inspector/reports", new InspectorReportsCommand());
         commands.put("inspector/statistic", new InspectorStatisticCommand());
@@ -67,14 +67,14 @@ public class FrontControllerServlet extends HttpServlet {
 
         String path = request.getRequestURI().replaceFirst("/", "");
 
-        Command command = commands.getOrDefault(path.trim(), (c) -> "/error/error404");
+        Command command = commands.getOrDefault(path.trim(), (req, res) -> "/error/error404");
         log.debug("Command: " + command.toString());
 
         String page = "/error/error500";
 
         try {
 
-            page = command.execute(request);
+            page = command.execute(request, response);
             //log.info("Page after executing command  " + page);
         } catch (Exception exception) {
             log.error("Exception " + exception.getMessage());

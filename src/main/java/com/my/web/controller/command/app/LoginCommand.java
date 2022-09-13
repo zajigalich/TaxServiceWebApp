@@ -11,6 +11,7 @@ import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class LoginCommand implements Command {
@@ -18,7 +19,7 @@ public class LoginCommand implements Command {
         private static final Logger log = Logger.getLogger(LoginCommand.class.getName());
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         log.debug("Login request  " + request.getRequestURI() + "  " + request.getMethod());
 
         if (request.getMethod().equalsIgnoreCase("get")) {

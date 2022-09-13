@@ -7,6 +7,7 @@ import com.my.web.dto.UserDTO;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class InspectorUserViewCommand implements Command {
 
@@ -15,7 +16,7 @@ public class InspectorUserViewCommand implements Command {
     private final UserService userService = UserService.getInstance();
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
         log.debug("UserId: " + request.getParameter("userId"));
         try {
             UserDTO userDTO = userService.getUserInformationById(Long.parseLong(request.getParameter("userId")));

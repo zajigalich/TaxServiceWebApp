@@ -70,7 +70,6 @@ public class MySQLUserDAOImpl implements UserDAO {
 
     @Override
     public Optional<User> findById(Long id) {
-        log.info("getting user");
         User user = null;
         try (Connection con = ManagerDB.getInstance().getConnection()) {
             try (PreparedStatement statement = con.prepareStatement(FIND_BY_ID)) {

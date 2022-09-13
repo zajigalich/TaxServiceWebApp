@@ -7,6 +7,7 @@ import com.my.web.dto.ReportDTO;
 import com.my.web.dto.ReportFormError;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class UserReportEditCommand implements Command {
@@ -14,7 +15,7 @@ public class UserReportEditCommand implements Command {
     private final ReportService reportService = ReportService.getInstance();
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         if (request.getMethod().equals("GET")) {
             return processGetRequest(request);

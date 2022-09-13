@@ -2,20 +2,20 @@ package com.my.web.controller.command.inspector;
 
 import com.my.exception.ReportStatusException;
 import com.my.exception.ReportsNotFoundException;
-import com.my.persistence.entity.Report;
 import com.my.service.InspectorService;
 import com.my.service.ReportService;
 import com.my.web.controller.command.Command;
 import com.my.web.dto.ReportDTO;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class InspectorReportViewCommand implements Command {
     private final ReportService reportService = ReportService.getInstance();
     private final InspectorService inspectorService = InspectorService.getInstance();
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         if (request.getMethod().equals("GET")) {
             return processGetMethod(request);

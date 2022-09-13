@@ -123,6 +123,14 @@
                                 </div>
 
                                 <div class="col-6">
+                                    <form action="${pageContext.request.contextPath}/user/report-save"
+                                          class='form-inline' method="POST">
+                                        <input type="hidden" name="reportId" value="${report.id}">
+                                        <input type="submit" value="<fmt:message key="reports.action.save"/>"/>
+                                    </form>
+                                </div>
+
+                                <div class="col-6">
                                     <form action="${pageContext.request.contextPath}/user/report-delete"
                                           class='form-inline' method="POST">
                                         <input type="hidden" name="reportId" value="${report.id}">

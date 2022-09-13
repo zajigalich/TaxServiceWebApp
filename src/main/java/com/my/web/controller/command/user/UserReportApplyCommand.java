@@ -8,13 +8,14 @@ import com.my.web.dto.ReportFormError;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class UserReportApplyCommand implements Command {
     private final ReportService reportService = ReportService.getInstance();
     private static final Logger log = Logger.getLogger(UserReportApplyCommand.class);
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         if (request.getMethod().equalsIgnoreCase("GET")) {
             return processGetRequest(request);

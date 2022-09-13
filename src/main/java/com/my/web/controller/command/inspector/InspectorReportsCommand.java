@@ -10,6 +10,7 @@ import com.my.web.dto.SortField;
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 
 public class InspectorReportsCommand implements Command {
@@ -19,7 +20,7 @@ public class InspectorReportsCommand implements Command {
     private static final Logger log = Logger.getLogger(InspectorReportsCommand.class.getName());
 
     @Override
-    public String execute(HttpServletRequest request) {
+    public String execute(HttpServletRequest request, HttpServletResponse response) {
 
         log.debug(request.getRequestURI());
         log.info("Request attributes: " + request.getAttribute("userId") + ", "
