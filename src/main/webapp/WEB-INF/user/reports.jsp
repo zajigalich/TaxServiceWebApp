@@ -2,8 +2,12 @@
 <%@ page import="com.my.persistence.entity.ReportStatus" %>
 <%@ page import="com.my.web.dto.SortField" %>
 <%@ page contentType="text/html; charset=ISO-8859-5" pageEncoding="ISO-8859-5" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
+<%@ taglib prefix="dt" uri="/WEB-INF/custom-tags.tld" %>
+<%@ taglib prefix="e" tagdir="/WEB-INF/tags" %>
+
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
 <html>

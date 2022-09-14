@@ -4,6 +4,9 @@
 <%@ page import="com.my.persistence.entity.TaxPeriod" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
+<%@ taglib prefix="dt" uri="/WEB-INF/custom-tags.tld" %>
+<%@ taglib prefix="e" tagdir="/WEB-INF/tags" %>
+
 <html>
 <head>
     <title><fmt:message key="user.report.form.title"/></title>

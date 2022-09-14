@@ -2951,3 +2951,533 @@
 2022-09-13 20:58:15 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800edea68@9232057
 2022-09-13 20:58:20 DEBUG FrontControllerServlet:71 - Command: UserReportSaveJsonCommand
 2022-09-13 20:58:20 INFO  MySQLUserDAOImpl:73 - getting user
+2022-09-13 21:06:23 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0210@4e9559cb
+2022-09-13 21:07:03 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:02:29 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:02:30 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:02:30 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:02:30 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:02:30 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:02:31 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@7ac88334
+2022-09-13 23:03:58 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-13 23:04:01 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-13 23:04:01 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-13 23:04:01 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-13 23:04:03 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-13 23:04:16 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-13 23:04:16 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-13 23:04:16 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-13 23:04:22 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-13 23:04:22 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-13 23:04:22 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-13 23:04:22 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-13 23:04:22 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-13 23:04:22 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-13 23:04:22 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-13 23:04:22 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-13 23:04:22 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-13 23:04:22 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-13 23:04:23 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-13 23:04:43 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@322c4735
+2022-09-13 23:04:43 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-13 23:04:57 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-13 23:04:57 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-13 23:04:57 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-13 23:04:57 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-13 23:04:57 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-13 23:04:57 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@9232057
+2022-09-14 02:21:36 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:21:39 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:21:39 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:21:39 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:21:47 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:21:47 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:21:47 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:21:47 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:21:47 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:21:47 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:21:47 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:21:47 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:21:47 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:21:47 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:21:48 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:21:55 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-14 02:21:55 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:22:00 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:22:02 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@6b4f718
+2022-09-14 02:22:02 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:29:11 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@3ec4fffc
+2022-09-14 02:29:12 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:29:12 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:29:13 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@3ec4fffc
+2022-09-14 02:29:18 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:29:18 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:29:18 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:29:18 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:29:18 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:29:18 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:29:18 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:29:18 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:29:18 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:29:18 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:29:19 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2980@3ec4fffc
+2022-09-14 02:31:24 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$226/0x0000000800ee2980@5188df4d
+2022-09-14 02:31:26 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:31:26 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:31:26 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$226/0x0000000800ee2980@5188df4d
+2022-09-14 02:31:30 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:31:30 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:31:30 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:31:30 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:31:30 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:31:30 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:31:30 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:31:30 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:31:31 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:31:31 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:31:31 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$226/0x0000000800ee2980@5188df4d
+2022-09-14 02:34:47 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf6d0@9232057
+2022-09-14 02:34:49 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:34:49 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:34:49 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf6d0@9232057
+2022-09-14 02:34:55 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:34:55 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:34:55 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:34:56 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:34:56 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:34:56 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:34:56 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:34:56 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:34:56 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:34:56 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:34:56 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf6d0@9232057
+2022-09-14 02:36:12 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:36:14 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:36:14 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:36:14 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:36:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:36:19 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:36:19 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:36:19 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:36:19 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:36:19 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:36:19 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:36:19 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:36:19 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:36:19 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:36:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:40:46 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@3ec4fffc
+2022-09-14 02:40:48 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:40:48 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:40:48 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@3ec4fffc
+2022-09-14 02:40:53 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:40:53 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:40:53 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:40:53 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:40:53 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:40:53 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:40:53 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:40:53 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:40:53 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:40:53 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:40:53 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@3ec4fffc
+2022-09-14 02:41:07 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:41:07 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:41:07 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:41:07 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:41:07 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:41:08 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@3ec4fffc
+2022-09-14 02:41:08 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:41:08 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:41:08 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:41:08 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:41:08 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:41:08 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@3ec4fffc
+2022-09-14 02:41:50 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:41:59 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:41:59 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:41:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:42:06 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:42:06 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:42:06 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:42:06 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:42:06 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:42:06 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:42:06 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:42:06 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:42:06 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:42:06 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:42:07 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2980@66f09f68
+2022-09-14 02:43:14 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@7ac88334
+2022-09-14 02:43:15 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:43:15 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:43:15 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@7ac88334
+2022-09-14 02:43:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:43:19 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:43:19 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:43:20 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:43:20 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:43:20 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:43:20 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:43:20 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:43:20 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:43:20 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:43:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@7ac88334
+2022-09-14 02:47:21 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@9232057
+2022-09-14 02:47:22 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:47:22 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:47:22 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@9232057
+2022-09-14 02:47:27 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:47:27 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:47:27 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:47:27 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:47:27 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:47:27 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:47:27 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:47:27 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:47:27 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:47:27 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:47:28 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee0848@9232057
+2022-09-14 02:49:10 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@9232057
+2022-09-14 02:49:15 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:49:15 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:49:15 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@9232057
+2022-09-14 02:49:20 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:49:20 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:49:20 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:49:20 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:49:20 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:49:20 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:49:20 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:49:20 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:49:20 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:49:20 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:49:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@9232057
+2022-09-14 02:50:18 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee0210@3ec4fffc
+2022-09-14 02:50:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:50:19 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:50:19 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee0210@3ec4fffc
+2022-09-14 02:50:23 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:50:23 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:50:23 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:50:23 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:50:23 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:50:23 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:50:23 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:50:23 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:50:24 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:50:24 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:50:24 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee0210@3ec4fffc
+2022-09-14 02:52:09 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf6d0@66f09f68
+2022-09-14 02:52:13 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:52:13 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:52:14 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf6d0@66f09f68
+2022-09-14 02:52:19 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:52:19 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:52:19 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:52:20 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:52:20 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:52:20 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:52:20 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:52:20 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:52:20 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:52:20 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:52:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf6d0@66f09f68
+2022-09-14 02:54:19 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:54:21 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:54:21 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:54:21 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:54:26 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:54:26 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:54:26 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:54:26 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:54:26 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:54:26 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:54:26 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:54:26 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:54:26 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:54:26 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:54:26 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:54:46 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@561a9479
+2022-09-14 02:57:51 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@9232057
+2022-09-14 02:57:54 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:57:54 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:57:54 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@9232057
+2022-09-14 02:58:00 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:58:00 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:58:00 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:58:01 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:58:01 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:58:01 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:58:01 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:58:01 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:58:01 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:58:01 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:58:01 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@9232057
+2022-09-14 02:58:48 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ede858@7ac88334
+2022-09-14 02:58:50 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:58:50 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 02:58:50 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ede858@7ac88334
+2022-09-14 02:58:55 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 02:58:55 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 02:58:55 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 02:58:55 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 02:58:55 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 02:58:55 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 02:58:55 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 02:58:55 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 02:58:55 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 02:58:55 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 02:58:56 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ede858@7ac88334
+2022-09-14 03:00:38 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@561a9479
+2022-09-14 03:00:40 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:00:40 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:00:41 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@561a9479
+2022-09-14 03:00:48 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:00:48 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:00:48 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:00:49 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:00:49 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:00:49 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:00:49 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:00:49 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:00:49 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:00:49 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:00:49 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@561a9479
+2022-09-14 03:00:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@34e47a4d
+2022-09-14 03:00:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@561a9479
+2022-09-14 03:01:07 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-14 03:01:08 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@561a9479
+2022-09-14 03:01:09 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:01:09 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:01:09 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:01:09 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:01:09 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:01:09 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@561a9479
+2022-09-14 03:02:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@7ac88334
+2022-09-14 03:02:23 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:02:23 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:02:23 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@7ac88334
+2022-09-14 03:02:35 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:02:35 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:02:35 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:02:35 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:02:35 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:02:35 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:02:35 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:02:35 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:02:35 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:02:35 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:02:36 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@7ac88334
+2022-09-14 03:02:40 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@792d569
+2022-09-14 03:02:40 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@7ac88334
+2022-09-14 03:02:42 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-14 03:02:42 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@7ac88334
+2022-09-14 03:02:44 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:02:44 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:02:44 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:02:44 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:02:44 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:02:44 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@7ac88334
+2022-09-14 03:16:03 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee2980@747499a6
+2022-09-14 03:16:08 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:16:08 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:16:08 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee2980@747499a6
+2022-09-14 03:16:12 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:16:12 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:16:12 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:16:12 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:16:12 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:16:12 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:16:12 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:16:12 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:16:12 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:16:12 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:16:13 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee2980@747499a6
+2022-09-14 03:18:58 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edea68@165f77f3
+2022-09-14 03:19:00 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:19:00 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:19:00 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edea68@165f77f3
+2022-09-14 03:19:04 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:19:04 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:19:04 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:19:04 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:19:04 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:19:04 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:19:04 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:19:04 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:19:04 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:19:04 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:19:05 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edea68@165f77f3
+2022-09-14 03:20:29 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf4c0@3ec4fffc
+2022-09-14 03:20:31 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:20:31 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:20:31 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf4c0@3ec4fffc
+2022-09-14 03:20:35 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:20:35 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:20:35 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:20:35 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:20:35 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:20:35 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:20:35 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:20:35 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:20:35 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:20:35 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:20:36 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf4c0@3ec4fffc
+2022-09-14 03:20:49 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@70d29e73
+2022-09-14 03:20:49 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf4c0@3ec4fffc
+2022-09-14 03:22:36 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800edf4c0@3ec4fffc
+2022-09-14 03:23:06 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:07 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:23:07 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:23:07 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:13 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:23:13 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:23:13 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:23:13 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:23:13 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:23:13 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:23:13 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:23:13 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:23:13 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:23:13 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:23:14 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:21 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@339fc638
+2022-09-14 03:23:21 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:27 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@339fc638
+2022-09-14 03:23:27 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:28 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@339fc638
+2022-09-14 03:23:28 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:43 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:23:43 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:23:43 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:23:43 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:23:43 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:23:44 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:45 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-14 03:23:45 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:48 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:23:48 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:23:48 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:23:48 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:23:48 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:23:48 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:23:50 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-14 03:23:50 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ede858@9232057
+2022-09-14 03:24:55 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:24:59 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:24:59 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:24:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:03 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:25:03 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:25:03 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:25:04 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:25:04 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:25:04 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:25:04 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:25:04 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:25:04 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:25:04 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:25:04 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:11 DEBUG FrontControllerServlet:71 - Command: UserReportApplyCommand
+2022-09-14 03:25:11 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:13 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:25:13 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:25:13 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:25:13 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:25:13 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:25:13 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:15 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@35d86c40
+2022-09-14 03:25:15 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:18 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.app.LogoutCommand@76e5f42b
+2022-09-14 03:25:18 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:20 DEBUG FrontControllerServlet:71 - Command: RegistrationCommand
+2022-09-14 03:25:20 INFO  RegistrationCommand:21 - Registration request: /registration request method  GET
+2022-09-14 03:25:20 INFO  RegistrationCommand:23 - Request to registration page
+2022-09-14 03:25:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - entrepreneur, [PHYSICAL_PERSON]
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - firstName, []
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - lastName, []
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - email, []
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - password, []
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - tin, []
+2022-09-14 03:25:24 INFO  RegistrationFilter:33 - address, []
+2022-09-14 03:25:25 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:40 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:41 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:25:41 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:25:41 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:49 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:25:49 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:25:49 INFO  LoginCommand:34 - Login process with data: a@a.a, 123456
+2022-09-14 03:25:49 INFO  UserService:33 - Validation login data for input: a@a.a, 123456
+2022-09-14 03:25:49 INFO  LoginCommand:41 - User logged in + User{id=4, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-09-11, tin='00000000', address='Home'}
+2022-09-14 03:25:49 INFO  ParameterUserIdFilter:26 - 
+2022-09-14 03:25:49 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-09-14 03:25:49 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-09-14 03:25:49 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-09-14 03:25:49 INFO  InspectorService:43 - service working..
+2022-09-14 03:25:49 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-09-14 03:25:49 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-09-14 03:25:49 INFO  InspectorService:49 - service finished
+2022-09-14 03:25:49 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:25:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.inspector.InspectorStatisticCommand@3f8621ca
+2022-09-14 03:25:59 INFO  InspectorService:76 - {inspector_count=1, user_count=2}
+2022-09-14 03:25:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:26:01 INFO  ParameterUserIdFilter:26 - 
+2022-09-14 03:26:01 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-09-14 03:26:01 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-09-14 03:26:01 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-09-14 03:26:01 INFO  InspectorService:43 - service working..
+2022-09-14 03:26:01 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-09-14 03:26:01 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-09-14 03:26:01 INFO  InspectorService:49 - service finished
+2022-09-14 03:26:01 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b88@9232057
+2022-09-14 03:30:58 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:00 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:31:00 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:31:01 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:07 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:31:07 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:31:07 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-09-14 03:31:07 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-09-14 03:31:07 INFO  LoginCommand:41 - User logged in + User{id=3, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-11, tin='00000001', address='Home'}
+2022-09-14 03:31:07 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-09-14 03:31:07 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-09-14 03:31:07 DEBUG UserReportsCommand:32 - user rep params  3, null, null, null, null
+2022-09-14 03:31:07 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=3, income=900000, taxPeriod=YEAR, taxRate=45, reportDate=2022-09-12, year=2020, lastChangeDate=null, status=DISAPPROVED, comment='NOT GOOOOOD!!! VERY-VERY BAAAD!!!'}
+2022-09-14 03:31:07 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=3, income=10000000, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-09-12, year=2022, lastChangeDate=null, status=PROCESSING, comment='null'}
+2022-09-14 03:31:08 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:13 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.user.UserInfoCommand@792d569
+2022-09-14 03:31:14 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:18 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.app.LogoutCommand@2ad4c6ba
+2022-09-14 03:31:18 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:20 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:31:20 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-09-14 03:31:20 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:27 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-09-14 03:31:27 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-09-14 03:31:27 INFO  LoginCommand:34 - Login process with data: a@a.a, 123456
+2022-09-14 03:31:27 INFO  UserService:33 - Validation login data for input: a@a.a, 123456
+2022-09-14 03:31:27 INFO  LoginCommand:41 - User logged in + User{id=4, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-09-11, tin='00000000', address='Home'}
+2022-09-14 03:31:27 INFO  ParameterUserIdFilter:26 - 
+2022-09-14 03:31:27 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-09-14 03:31:27 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-09-14 03:31:27 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-09-14 03:31:27 INFO  InspectorService:43 - service working..
+2022-09-14 03:31:27 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-09-14 03:31:27 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-09-14 03:31:27 INFO  InspectorService:49 - service finished
+2022-09-14 03:31:28 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:35 INFO  ParameterUserIdFilter:26 - 
+2022-09-14 03:31:35 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-09-14 03:31:35 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-09-14 03:31:35 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-09-14 03:31:35 INFO  InspectorService:43 - service working..
+2022-09-14 03:31:35 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-09-14 03:31:35 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-09-14 03:31:35 INFO  InspectorService:49 - service finished
+2022-09-14 03:31:35 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc
+2022-09-14 03:31:37 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.inspector.InspectorStatisticCommand@24133d90
+2022-09-14 03:31:37 INFO  InspectorService:76 - {inspector_count=1, user_count=2}
+2022-09-14 03:31:37 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2980@3ec4fffc

@@ -2,6 +2,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="com.my.persistence.entity.TaxPeriod" %>
+<%@ taglib prefix="dt" uri="/WEB-INF/custom-tags.tld" %>
+<%@ taglib prefix="e" tagdir="/WEB-INF/tags" %>
+
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
 <html>

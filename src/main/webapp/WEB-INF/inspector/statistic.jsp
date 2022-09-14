@@ -3,6 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <fmt:setLocale value="${sessionScope.lang}"/>
 <fmt:setBundle basename="messages"/>
+<%@ taglib prefix="dt" uri="/WEB-INF/custom-tags.tld" %>
+<%@ taglib prefix="e" tagdir="/WEB-INF/tags" %>
+
 <html>
 <head>
     <title><fmt:message key="inspector.statistic.title"/></title>
