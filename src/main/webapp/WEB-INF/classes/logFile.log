@@ -5744,3 +5744,51 @@
 2022-10-07 00:27:36 ERROR UserService:42 - No such user found with emailt@t.t99999
 2022-10-07 00:27:36 INFO  UserService:34 - Validation login data for input: t@t.t, 1234569999
 2022-10-07 00:27:36 ERROR UserService:37 - Wrong password input for t@t.t
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:67 - creating report
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:68 - Report{id=null, userId=37, income=1, taxPeriod=FIRST_PERIOD, taxRate=1, reportDate=null, year=2001, status=APPROVED, comment='comment'}
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:80 - com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO report (comment, income, status_id, period_id, tax_rate, year, user_id) values ('comment', 1, 2, 1, 1, 2001, 37);
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF('2022-10-07' IS NULL, r.report_date, '2022-10-07'))AND r.period_id = (IF(1 IS NULL, r.period_id, 1))AND r.status_id = (IF(2 IS NULL, r.status_id, 2))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:306 - Report{id=6, userId=37, income=1, taxPeriod=FIRST_PERIOD, taxRate=1, reportDate=2022-10-07, year=2001, status=APPROVED, comment='comment'}
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:123 - 6
+2022-10-07 00:30:01 INFO  MySQLReportDAOImpl:133 - false
+2022-10-07 00:30:01 ERROR MySQLUserDAOImpl:63 - Transaction fault
+2022-10-07 00:30:01 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 00:30:01 INFO  UserService:34 - Validation login data for input: t@t.t99999, 123456
+2022-10-07 00:30:01 ERROR UserService:42 - No such user found with emailt@t.t99999
+2022-10-07 00:30:01 INFO  UserService:34 - Validation login data for input: t@t.t, 1234569999
+2022-10-07 00:30:01 ERROR UserService:37 - Wrong password input for t@t.t
+2022-10-07 00:30:01 ERROR RegistrationService:18 - User with email(t@t.t) is already exist
+2022-10-07 00:30:01 ERROR RegistrationService:28 - Inspector with email(t@t.t) is already exist
+2022-10-07 02:33:10 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:33:10 INFO  UserService:34 - Validation login data for input: t@t.t99999, 123456
+2022-10-07 02:33:10 ERROR UserService:42 - No such user found with emailt@t.t99999
+2022-10-07 02:33:10 INFO  UserService:34 - Validation login data for input: t@t.t, 1234569999
+2022-10-07 02:33:10 ERROR UserService:37 - Wrong password input for t@t.t
+2022-10-07 02:33:10 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:33:10 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:05 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:05 INFO  UserService:34 - Validation login data for input: t@t.t99999, 123456
+2022-10-07 02:35:05 ERROR UserService:42 - No such user found with emailt@t.t99999
+2022-10-07 02:35:05 INFO  UserService:34 - Validation login data for input: t@t.t, 1234569999
+2022-10-07 02:35:05 ERROR UserService:37 - Wrong password input for t@t.t
+2022-10-07 02:35:05 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:05 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:67 - creating report
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:68 - Report{id=null, userId=45, income=1, taxPeriod=FIRST_PERIOD, taxRate=1, reportDate=null, year=2001, status=APPROVED, comment='comment'}
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:80 - com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO report (comment, income, status_id, period_id, tax_rate, year, user_id) values ('comment', 1, 2, 1, 1, 2001, 45);
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF('2022-10-07' IS NULL, r.report_date, '2022-10-07'))AND r.period_id = (IF(1 IS NULL, r.period_id, 1))AND r.status_id = (IF(2 IS NULL, r.status_id, 2))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:306 - Report{id=7, userId=45, income=1, taxPeriod=FIRST_PERIOD, taxRate=1, reportDate=2022-10-07, year=2001, status=APPROVED, comment='comment'}
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:123 - 7
+2022-10-07 02:35:27 INFO  MySQLReportDAOImpl:133 - false
+2022-10-07 02:35:27 ERROR MySQLUserDAOImpl:63 - Transaction fault
+2022-10-07 02:35:27 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:27 INFO  UserService:34 - Validation login data for input: t@t.t99999, 123456
+2022-10-07 02:35:27 ERROR UserService:42 - No such user found with emailt@t.t99999
+2022-10-07 02:35:27 INFO  UserService:34 - Validation login data for input: t@t.t, 1234569999
+2022-10-07 02:35:27 ERROR UserService:37 - Wrong password input for t@t.t
+2022-10-07 02:35:27 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:27 INFO  UserService:34 - Validation login data for input: t@t.t, 123456
+2022-10-07 02:35:27 ERROR RegistrationService:18 - User with email(t@t.t) is already exist
+2022-10-07 02:35:28 ERROR RegistrationService:28 - Inspector with email(t@t.t) is already exist

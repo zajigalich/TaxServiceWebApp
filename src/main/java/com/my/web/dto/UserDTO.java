@@ -173,6 +173,41 @@ public class UserDTO {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserDTO userDTO = (UserDTO) o;
+
+        if (firstName != null ? !firstName.equals(userDTO.firstName) : userDTO.firstName != null) return false;
+        if (lastName != null ? !lastName.equals(userDTO.lastName) : userDTO.lastName != null) return false;
+        if (email != null ? !email.equals(userDTO.email) : userDTO.email != null) return false;
+        if (password != null ? !password.equals(userDTO.password) : userDTO.password != null) return false;
+        if (tin != null ? !tin.equals(userDTO.tin) : userDTO.tin != null) return false;
+        if (type != null ? !type.equals(userDTO.type) : userDTO.type != null) return false;
+        if (address != null ? !address.equals(userDTO.address) : userDTO.address != null) return false;
+        if (dateOfRegistration != null ? !dateOfRegistration.equals(userDTO.dateOfRegistration) : userDTO.dateOfRegistration != null)
+            return false;
+        if (userId != null ? !userId.equals(userDTO.userId) : userDTO.userId != null) return false;
+        return userRole != null ? userRole.equals(userDTO.userRole) : userDTO.userRole == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = firstName != null ? firstName.hashCode() : 0;
+        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
+        result = 31 * result + (email != null ? email.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
+        result = 31 * result + (tin != null ? tin.hashCode() : 0);
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        result = 31 * result + (address != null ? address.hashCode() : 0);
+        result = 31 * result + (dateOfRegistration != null ? dateOfRegistration.hashCode() : 0);
+        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        result = 31 * result + (userRole != null ? userRole.hashCode() : 0);
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "UserDTO{" +
                 "firstName='" + firstName + '\'' +
