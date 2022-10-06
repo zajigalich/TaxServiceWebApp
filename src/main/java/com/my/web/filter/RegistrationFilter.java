@@ -29,12 +29,7 @@ public class RegistrationFilter implements Filter {
         if (isParamCorrect.get())
             filterChain.doFilter(servletRequest, servletResponse);
         else {
-            for (Map.Entry<String, String[]> entry : servletRequest.getParameterMap().entrySet()) {
-                log.info(entry.getKey() + ", " + Arrays.toString(entry.getValue()));
-                String key = entry.getKey();
-                String[] value = entry.getValue();
-                servletRequest.setAttribute(key, value);
-            }
+            servletRequest.getParameterMap().forEach(servletRequest::setAttribute);
             servletRequest.getRequestDispatcher("/registration.jsp").forward(servletRequest, servletResponse);
         }
     }

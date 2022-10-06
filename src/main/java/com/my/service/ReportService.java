@@ -72,13 +72,12 @@ public class ReportService {
         return reportDAO.delete(reportId);
     }
 
-    public Report applyNewReport(ReportDTO report) {
+    public void applyNewReport(ReportDTO report) {
 
         report.setStatus(String.valueOf(ReportStatus.PROCESSING));
         report.setReportDate(Date.valueOf(LocalDate.now()));
         log.info(report.toString());
-
-        return reportDAO.create(EntityDTOUtil.convertReportDTOToEntity(report));
+        reportDAO.create(EntityDTOUtil.convertReportDTOToEntity(report));
     }
 
     public Report updateEditedReport(ReportDTO report) {

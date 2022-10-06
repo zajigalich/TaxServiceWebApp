@@ -63,7 +63,7 @@ public class MySQLReportDAOImpl implements ReportDAO {
     }
 
     @Override
-    public Report create(Report report) {
+    public boolean create(Report report) {
         log.info("creating report");
         log.info(report.toString());
         try (Connection connection = ManagerDB.getInstance().getConnection()) {
@@ -72,7 +72,6 @@ public class MySQLReportDAOImpl implements ReportDAO {
                 preparedStatement.setString(++k, report.getComment());
                 preparedStatement.setInt(++k, report.getIncome());
                 preparedStatement.setInt(++k, report.getStatus().ordinal() + 1);
-                // preparedStatement.setDate(++k, report.getReportDate());
                 preparedStatement.setInt(++k, report.getTaxPeriod().ordinal() + 1);
                 preparedStatement.setInt(++k, report.getTaxRate());
                 preparedStatement.setInt(++k, report.getYear());
@@ -81,6 +80,7 @@ public class MySQLReportDAOImpl implements ReportDAO {
                 log.info(preparedStatement.toString());
                 preparedStatement.execute();
                 connection.commit();
+                return true;
             } catch (SQLException ex) {
                 connection.rollback();
                 ex.printStackTrace();
@@ -88,7 +88,7 @@ public class MySQLReportDAOImpl implements ReportDAO {
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
-        return report;
+        return false;
     }
 
     @Override

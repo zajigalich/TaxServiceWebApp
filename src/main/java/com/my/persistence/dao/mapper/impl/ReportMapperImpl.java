@@ -25,7 +25,7 @@ public class ReportMapperImpl implements ObjectMapper<Report> {
                 .income(resultSet.getInt(REPORT_INCOME.getField()))
                 .taxRate(resultSet.getInt(REPORT_TAX_RATE.getField()))
                 .reportDate(resultSet.getDate(REPORT_DATE.getField()))
-                .lastChangeDate(resultSet.getDate(REPORT_LAST_CHANGE_DATE.getField()))
+                //.lastChangeDate(resultSet.getDate(REPORT_LAST_CHANGE_DATE.getField()))
                 .status(ReportStatus.values()[resultSet.getInt(REPORT_STATUS_ID.getField()) - 1])
                 .comment(resultSet.getString(REPORT_COMMENT.getField()))
                 .userId(resultSet.getLong(REPORT_USER_ID.getField()))

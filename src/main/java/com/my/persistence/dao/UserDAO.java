@@ -9,8 +9,6 @@ public interface UserDAO extends BaseDAO<User>{
 
 //    boolean validate(String email, String pass);
 
-    boolean existsByEmail(String email);
-
     Optional<User> findByEmail(String email);
 
     Map<String, Long> getStatisticDataUsersCountByRoles();

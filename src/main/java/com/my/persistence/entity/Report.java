@@ -17,7 +17,6 @@ public class Report extends AbstractBaseEntity {
 
     private Integer year;
 
-    private Date lastChangeDate;
 
     private ReportStatus status;
 
@@ -66,10 +65,10 @@ public class Report extends AbstractBaseEntity {
             return this;
         }
 
-        public Builder lastChangeDate(Date lastChangeDate) {
+        /*public Builder lastChangeDate(Date lastChangeDate) {
             this.entity.setLastChangeDate(lastChangeDate);
             return this;
-        }
+        }*/
 
         public Builder status(ReportStatus status) {
             this.entity.setStatus(status);
@@ -145,14 +144,6 @@ public class Report extends AbstractBaseEntity {
         this.year = year;
     }
 
-    public Date getLastChangeDate() {
-        return lastChangeDate;
-    }
-
-    public void setLastChangeDate(Date lastChangeDate) {
-        this.lastChangeDate = lastChangeDate;
-    }
-
     public ReportStatus getStatus() {
         return status;
     }
@@ -195,7 +186,6 @@ public class Report extends AbstractBaseEntity {
         result = 31 * result + (taxRate != null ? taxRate.hashCode() : 0);
         result = 31 * result + (reportDate != null ? reportDate.hashCode() : 0);
         result = 31 * result + (year != null ? year.hashCode() : 0);
-        result = 31 * result + (lastChangeDate != null ? lastChangeDate.hashCode() : 0);
         result = 31 * result + (status != null ? status.hashCode() : 0);
         result = 31 * result + (comment != null ? comment.hashCode() : 0);
         return result;
@@ -211,7 +201,6 @@ public class Report extends AbstractBaseEntity {
                 ", taxRate=" + taxRate +
                 ", reportDate=" + reportDate +
                 ", year=" + year +
-                ", lastChangeDate=" + lastChangeDate +
                 ", status=" + status +
                 ", comment='" + comment + '\'' +
                 '}';

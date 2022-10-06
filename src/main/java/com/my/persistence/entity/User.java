@@ -165,9 +165,9 @@ public class User extends AbstractBaseEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Report report = (Report) o;
+        User user = (User) o;
 
-        return Objects.equals(id, report.id);
+        return Objects.equals(id, user.id);
     }
 
     @Override

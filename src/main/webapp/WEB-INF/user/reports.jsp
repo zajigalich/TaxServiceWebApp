@@ -118,14 +118,24 @@
                         <div class="container">
                             <div class="row">
 
-                                <div class="col-6">
-                                    <form action="${pageContext.request.contextPath}/user/report-edit"
-                                          class='form-inline' method="GET">
-                                        <input type="hidden" name="reportId" value="${report.id}">
-                                        <input type="submit" value="<fmt:message key="reports.action.edit"/>"/>
-                                    </form>
-                                </div>
+                                <c:if test="${report.status != 'APPROVED'}">
+                                    <div class="col-6">
+                                        <form action="${pageContext.request.contextPath}/user/report-edit"
+                                              class='form-inline' method="GET">
+                                            <input type="hidden" name="reportId" value="${report.id}">
+                                            <input type="submit" value="<fmt:message key="reports.action.edit"/>"/>
+                                        </form>
+                                    </div>
+                                    <div class="col-6">
+                                        <form action="${pageContext.request.contextPath}/user/report-delete"
+                                              class='form-inline' method="POST">
+                                            <input type="hidden" name="reportId" value="${report.id}">
+                                            <input type="submit" value="<fmt:message key="reports.action.delete"/>"/>
+                                        </form>
+                                    </div>
+                                </c:if>
 
+                                <c:if test="${report.status == 'APPROVED'}">
                                 <div class="col-6">
                                     <form action="${pageContext.request.contextPath}/user/report-save"
                                           class='form-inline' method="POST">
@@ -133,14 +143,8 @@
                                         <input type="submit" value="<fmt:message key="reports.action.save"/>"/>
                                     </form>
                                 </div>
+                                </c:if>
 
-                                <div class="col-6">
-                                    <form action="${pageContext.request.contextPath}/user/report-delete"
-                                          class='form-inline' method="POST">
-                                        <input type="hidden" name="reportId" value="${report.id}">
-                                        <input type="submit" value="<fmt:message key="reports.action.delete"/>"/>
-                                    </form>
-                                </div>
                             </div>
                         </div>
                     </td>

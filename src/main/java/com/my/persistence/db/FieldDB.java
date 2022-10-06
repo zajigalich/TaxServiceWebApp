@@ -18,7 +18,6 @@ public enum FieldDB {
     REPORT_INCOME("income"),
     REPORT_TAX_RATE("tax_rate"),
     REPORT_DATE("report_date"),
-    REPORT_LAST_CHANGE_DATE("last_change_date"),
     REPORT_STATUS_ID("status_id"),
     REPORT_COMMENT("comment"),
     REPORT_USER_ID("user_id");

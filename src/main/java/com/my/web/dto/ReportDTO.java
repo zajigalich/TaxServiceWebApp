@@ -7,7 +7,8 @@ import com.my.persistence.entity.TaxPeriod;
 import java.sql.Date;
 
 public class ReportDTO {
-    Long id;
+
+    private Long id;
 
     private Integer income;
 

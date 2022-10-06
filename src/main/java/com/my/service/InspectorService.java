@@ -58,8 +58,9 @@ public class InspectorService {
 
         reportList = reportDao.findAll();
 
-        if (reportList == null || reportList.isEmpty())
+        if (reportList == null || reportList.isEmpty()) {
             throw new ReportsNotFoundException("No reports found");
+        }
 
         return reportList.stream()
                 .map(EntityDTOUtil::convertReportEntityToDTO)

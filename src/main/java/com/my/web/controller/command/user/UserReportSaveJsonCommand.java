@@ -17,7 +17,7 @@ public class UserReportSaveJsonCommand implements Command {
 
     private final ReportService reportService = ReportService.getInstance();
 
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {

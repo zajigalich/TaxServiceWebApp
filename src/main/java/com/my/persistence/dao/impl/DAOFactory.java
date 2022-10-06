@@ -4,6 +4,7 @@ import com.my.persistence.dao.ReportDAO;
 import com.my.persistence.dao.UserDAO;
 
 public class DAOFactory {
+
     private static ReportDAO reportDAO;
     private static UserDAO userDAO;
 
