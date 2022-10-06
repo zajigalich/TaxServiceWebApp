@@ -1,4 +1,4 @@
-package com.my.persistanse.dao;
+package com.my;
 
 import com.my.exception.UserAlreadyExistsException;
 import com.my.persistence.dao.ReportDAO;
@@ -35,9 +35,7 @@ public class DAOTest {
 
         Assert.assertTrue(userDAO.create(testUser));
 
-        Assert.assertThrows(UserAlreadyExistsException.class, () -> {
-            userDAO.create(testUser);
-        });
+        Assert.assertThrows(UserAlreadyExistsException.class, () -> userDAO.create(testUser));
 
         Assert.assertTrue(userDAO.findByEmail(testUser.getEmail()).isPresent());
 
@@ -116,8 +114,6 @@ public class DAOTest {
         Assert.assertEquals(actual.getTaxRate(), testReport.getTaxRate());
         Assert.assertEquals(actual.getTaxPeriod(), testReport.getTaxPeriod());
         Assert.assertEquals(actual.getYear(), testReport.getYear());
-        //Assert.assertEquals(actual, testReport);
-
 
         reports = reportDAO.findByParam(null,
                 new java.sql.Date(new java.util.Date().getTime()),

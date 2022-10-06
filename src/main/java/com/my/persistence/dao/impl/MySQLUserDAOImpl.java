@@ -62,7 +62,6 @@ public class MySQLUserDAOImpl implements UserDAO {
             } catch (SQLException e) {
                 log.error("Transaction fault");
                 con.rollback();
-                e.printStackTrace();
                 throw new UserAlreadyExistsException("User already exists");
             }
         } catch (SQLException e) {

@@ -28,12 +28,12 @@ public class FrontControllerServlet extends HttpServlet {
 
     @Override
     public void init(ServletConfig config) {
-        //config.getServletContext().setAttribute("loggedUsers", new HashSet<String>());
 
         commands.put("", new MainCommand());
         commands.put("registration", new RegistrationCommand());
         commands.put("login", new LoginCommand());
         commands.put("logout", new LogoutCommand());
+        commands.put("register", new RegisterInspectorCommand());
 
         commands.put("user/reports", new UserReportsCommand());
         commands.put("user/user-info", new UserInfoCommand());
@@ -46,7 +46,6 @@ public class FrontControllerServlet extends HttpServlet {
         commands.put("inspector/statistic", new InspectorStatisticCommand());
         commands.put("inspector/user-view", new InspectorUserViewCommand());
         commands.put("inspector/report-view", new InspectorReportViewCommand());
-        commands.put("register", new RegisterInspectorCommand());
 
         commands.put("error", new ExceptionCommand());
 

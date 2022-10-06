@@ -41,6 +41,5 @@ public class RegisterInspectorCommand implements Command {
         }
 
         return "/login";
-
     }
 }

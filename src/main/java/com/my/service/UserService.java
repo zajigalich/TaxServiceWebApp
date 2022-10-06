@@ -15,6 +15,7 @@ import java.util.Optional;
 public class UserService {
 
     private final static UserDAO userDAO = DAOFactory.getUserDaoInstance();
+
     private final static Logger log = Logger.getLogger(UserService.class);
 
     private static UserService userService;
