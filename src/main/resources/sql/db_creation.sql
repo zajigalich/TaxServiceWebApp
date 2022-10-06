@@ -90,9 +90,9 @@
     CREATE TABLE IF NOT EXISTS `tax_data`.`user` (
                                                      `id` INT NOT NULL AUTO_INCREMENT,
                                                      `role_id` INT NOT NULL,
-                                                     `entrepreneur_type_id` INT NOT NULL,
-                                                     `name` VARCHAR(16) CHARACTER SET 'cp1251' COLLATE 'cp1251_bin' NOT NULL,
-                                                     `lastname` VARCHAR(16) CHARACTER SET 'cp1251' NOT NULL,
+                                                     `entrepreneur_type_id` INT ,
+                                                     `name` VARCHAR(16) CHARACTER SET 'cp1251' COLLATE 'cp1251_bin',
+                                                     `lastname` VARCHAR(16) CHARACTER SET 'cp1251' ,
                                                      `email` VARCHAR(255) CHARACTER SET 'cp1251' NOT NULL,
                                                      `password` VARCHAR(20) CHARACTER SET 'cp1251' NOT NULL,
                                                      `registration_time` DATE NOT NULL DEFAULT (curdate()),

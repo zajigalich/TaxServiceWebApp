@@ -11,47 +11,36 @@ import org.apache.log4j.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+public class RegisterInspectorCommand implements Command {
 
-public class RegistrationCommand implements Command {
-
-    private static final Logger log = Logger.getLogger(RegistrationCommand.class);
+    private static final Logger log = Logger.getLogger(RegisterInspectorCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
-        log.info("Registration request: " + request.getRequestURI() + " request method  " + request.getMethod());
 
         if (request.getMethod().equalsIgnoreCase("get")) {
             log.info("Request to registration page");
-            return "/registration";
+            return "/register";
         }
 
-        User user = User.builder()
-                .name(request.getParameter("firstName"))
-                .userRole(UserRole.USER)
-                .lastName(request.getParameter("lastName"))
+        User inspector = User.builder()
+                .userRole(UserRole.INSPECTOR)
                 .email(request.getParameter("email"))
                 .password(request.getParameter("password"))
-                .tin(request.getParameter("tin"))
-                .entrepreneurType(EntrepreneurType.valueOf(request.getParameter("entrepreneur")))
-                .address(request.getParameter("address"))
                 .build();
-        log.info("User entity has been created  " + user);
+        log.info("User entity has been created  " + inspector);
         try {
 
-            RegistrationService.registerUser(user);
-            log.info("User has been registered: " + user);
+            RegistrationService.registerInspector(inspector);
+            log.info("User has been registered: " + inspector);
 
         } catch (UserAlreadyExistsException e) {
             log.error("User with email(" + request.getParameter("email") + ") is already exist");
             e.printStackTrace();
-            return "/registration";
+            return "/register";
         }
 
         return "/login";
-    }
 
-    @Override
-    public String toString() {
-        return "RegistrationCommand";
     }
 }

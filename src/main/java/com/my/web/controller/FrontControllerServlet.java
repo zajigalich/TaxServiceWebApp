@@ -46,6 +46,7 @@ public class FrontControllerServlet extends HttpServlet {
         commands.put("inspector/statistic", new InspectorStatisticCommand());
         commands.put("inspector/user-view", new InspectorUserViewCommand());
         commands.put("inspector/report-view", new InspectorReportViewCommand());
+        commands.put("register", new RegisterInspectorCommand());
 
         commands.put("error", new ExceptionCommand());
 

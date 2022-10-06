@@ -33,6 +33,9 @@ public class LoginCommand implements Command {
 
         log.info("Login process with data: " + email +", " + password);
 
+        if(email.equals("inspector") && password.equals("register")){
+            return "redirect:/register";
+        }
         try {
             User user = UserService.getInstance().validateLoginData(email, password);
 

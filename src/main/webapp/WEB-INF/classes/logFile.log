@@ -5356,3 +5356,319 @@
 2022-10-06 17:26:53 INFO  MySQLReportDAOImpl:123 - 18
 2022-10-06 17:26:53 INFO  MySQLReportDAOImpl:133 - false
 2022-10-06 17:26:53 ERROR MySQLUserDAOImpl:59 - Transaction fault
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:67 - creating report
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:68 - Report{id=null, userId=45, income=1, taxPeriod=FIRST_PERIOD, taxRate=1, reportDate=null, year=2001, status=APPROVED, comment='comment'}
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:80 - com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO report (comment, income, status_id, period_id, tax_rate, year, user_id) values ('comment', 1, 2, 1, 1, 2001, 45);
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF('2022-10-06' IS NULL, r.report_date, '2022-10-06'))AND r.period_id = (IF(1 IS NULL, r.period_id, 1))AND r.status_id = (IF(2 IS NULL, r.status_id, 2))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:306 - Report{id=19, userId=45, income=1, taxPeriod=FIRST_PERIOD, taxRate=1, reportDate=2022-10-06, year=2001, status=APPROVED, comment='comment'}
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:123 - 19
+2022-10-06 21:02:49 INFO  MySQLReportDAOImpl:133 - false
+2022-10-06 21:02:49 ERROR MySQLUserDAOImpl:59 - Transaction fault
+2022-10-06 21:04:44 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:04:47 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:04:48 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-10-06 21:04:48 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:04:48 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:04:52 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:04:53 DEBUG FrontControllerServlet:71 - Command: RegistrationCommand
+2022-10-06 21:04:53 INFO  RegistrationCommand:21 - Registration request: /registration request method  GET
+2022-10-06 21:04:53 INFO  RegistrationCommand:23 - Request to registration page
+2022-10-06 21:04:53 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:04:58 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:04:59 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-10-06 21:04:59 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:04:59 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:03 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-10-06 21:05:03 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:05:03 INFO  LoginCommand:34 - Login process with data: a@a.a, 123456
+2022-10-06 21:05:04 INFO  UserService:33 - Validation login data for input: a@a.a, 123456
+2022-10-06 21:05:04 INFO  LoginCommand:41 - User logged in + User{id=1, email='a@a.a', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='Admin', lastName='Admin', dateOfRegistration=2022-09-14, tin='null', address='null'}
+2022-10-06 21:05:04 INFO  ParameterUserIdFilter:26 - 
+2022-10-06 21:05:04 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-10-06 21:05:04 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-10-06 21:05:04 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-10-06 21:05:04 INFO  InspectorService:43 - service working..
+2022-10-06 21:05:04 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:05:04 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:05:04 INFO  InspectorService:49 - service finished
+2022-10-06 21:05:04 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:23 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.inspector.InspectorStatisticCommand@61ba25ff
+2022-10-06 21:05:23 INFO  InspectorService:77 - {inspector_count=1, user_count=2}
+2022-10-06 21:05:23 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:27 INFO  ParameterUserIdFilter:26 - 
+2022-10-06 21:05:27 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-10-06 21:05:27 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-10-06 21:05:27 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-10-06 21:05:27 INFO  InspectorService:43 - service working..
+2022-10-06 21:05:27 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:05:27 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:05:27 INFO  InspectorService:49 - service finished
+2022-10-06 21:05:27 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:31 INFO  ParameterUserIdFilter:26 - 
+2022-10-06 21:05:31 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-10-06 21:05:31 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-10-06 21:05:31 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-10-06 21:05:31 INFO  InspectorService:43 - service working..
+2022-10-06 21:05:31 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:05:31 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:05:31 INFO  InspectorService:49 - service finished
+2022-10-06 21:05:31 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:32 INFO  ParameterUserIdFilter:26 - 
+2022-10-06 21:05:32 DEBUG FrontControllerServlet:71 - Command: InspectorReportsCommand
+2022-10-06 21:05:32 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-10-06 21:05:32 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-10-06 21:05:32 INFO  InspectorService:43 - service working..
+2022-10-06 21:05:32 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:05:32 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:05:32 INFO  InspectorService:49 - service finished
+2022-10-06 21:05:32 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:37 DEBUG FrontControllerServlet:71 - Command: InspectorReportViewCommand
+2022-10-06 21:05:37 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:45 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:50 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.command.app.LogoutCommand@17d4ff09
+2022-10-06 21:05:50 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:51 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-10-06 21:05:51 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:05:52 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:05:57 DEBUG FrontControllerServlet:71 - Command: LoginCommand
+2022-10-06 21:05:57 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:05:57 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-10-06 21:05:57 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-10-06 21:05:57 INFO  LoginCommand:41 - User logged in + User{id=2, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-09-14, tin='00000001', address='Home'}
+2022-10-06 21:05:57 DEBUG FrontControllerServlet:71 - Command: UserReportsCommand
+2022-10-06 21:05:57 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-10-06 21:05:57 DEBUG UserReportsCommand:32 - user rep params  2, null, null, null, null
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=1, userId=2, income=2000000, taxPeriod=FIRST_PERIOD, taxRate=20, reportDate=2022-09-14, year=2020, status=APPROVED, comment='like'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=3, userId=2, income=23000, taxPeriod=THIRD_PERIOD, taxRate=10, reportDate=2022-09-14, year=2020, status=PROCESSING, comment='null'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=4, userId=2, income=25000, taxPeriod=FOURTH_PERIOD, taxRate=7, reportDate=2022-09-14, year=2020, status=APPROVED, comment='GOOOOOD!!! VERY-VERY GOOOOOD!!!'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=5, userId=2, income=90000, taxPeriod=YEAR, taxRate=11, reportDate=2022-09-14, year=2021, status=PROCESSING, comment='null'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=8, userId=2, income=1111, taxPeriod=FIRST_PERIOD, taxRate=7, reportDate=2022-09-14, year=2022, status=PROCESSING, comment='null'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=9, userId=2, income=2500, taxPeriod=THIRD_PERIOD, taxRate=17, reportDate=2022-09-14, year=2020, status=PROCESSING, comment='null'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=10, userId=2, income=1488, taxPeriod=FOURTH_PERIOD, taxRate=9, reportDate=2022-09-16, year=2018, status=PROCESSING, comment='null'}
+2022-10-06 21:05:57 INFO  MySQLReportDAOImpl:306 - Report{id=11, userId=2, income=900007, taxPeriod=SECOND_PERIOD, taxRate=7, reportDate=2022-10-04, year=2016, status=PROCESSING, comment='null'}
+2022-10-06 21:05:57 DEBUG FrontControllerServlet:71 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee0848@5ceb3505
+2022-10-06 21:16:12 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@738b0024
+2022-10-06 21:16:14 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:16:14 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:16:15 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@738b0024
+2022-10-06 21:16:57 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:16:57 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:16:57 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:16:57 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@5ed5ad41
+2022-10-06 21:16:57 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:16:57 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@738b0024
+2022-10-06 21:17:16 DEBUG FrontControllerServlet:72 - Command: RegistrationCommand
+2022-10-06 21:17:16 INFO  RegistrationCommand:21 - Registration request: /registration request method  POST
+2022-10-06 21:17:16 ERROR FrontControllerServlet:81 - Exception Name is null
+2022-10-06 21:17:16 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@738b0024
+2022-10-06 21:19:43 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@738b0024
+2022-10-06 21:19:45 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:19:45 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:19:45 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@738b0024
+2022-10-06 21:19:56 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:19:56 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:19:56 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:19:56 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@76e5f42b
+2022-10-06 21:19:56 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:19:57 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@738b0024
+2022-10-06 21:20:05 DEBUG FrontControllerServlet:72 - Command: RegistrationCommand
+2022-10-06 21:20:05 INFO  RegistrationCommand:21 - Registration request: /registration request method  POST
+2022-10-06 21:20:05 ERROR FrontControllerServlet:81 - Exception Name is null
+2022-10-06 21:20:05 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@738b0024
+2022-10-06 21:20:19 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@738b0024
+2022-10-06 21:21:40 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800edec78@6e0a5912
+2022-10-06 21:21:42 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:21:42 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:21:42 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800edec78@6e0a5912
+2022-10-06 21:21:47 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:21:47 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:21:47 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:21:47 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@56713e9e
+2022-10-06 21:21:47 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:21:47 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800edec78@6e0a5912
+2022-10-06 21:21:54 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@56713e9e
+2022-10-06 21:21:54 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:21:54 ERROR FrontControllerServlet:81 - Exception Cannot invoke "com.my.persistence.entity.EntrepreneurType.ordinal()" because the return value of "com.my.persistence.entity.User.getEntrepreneurType()" is null
+2022-10-06 21:21:55 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800edec78@6e0a5912
+2022-10-06 21:26:02 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@18800252
+2022-10-06 21:26:04 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:26:04 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:26:04 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@18800252
+2022-10-06 21:26:10 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:26:10 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:26:10 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:26:10 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@2ad4c6ba
+2022-10-06 21:26:10 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:26:10 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@18800252
+2022-10-06 21:26:22 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@2ad4c6ba
+2022-10-06 21:26:22 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:26:22 ERROR MySQLUserDAOImpl:87 - Transaction fault
+2022-10-06 21:26:22 ERROR RegisterInspectorCommand:38 - User with email(a1@a1.a1) is already exist
+2022-10-06 21:26:22 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@18800252
+2022-10-06 21:27:31 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2b90@64f7161a
+2022-10-06 21:27:32 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:27:32 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:27:32 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2b90@64f7161a
+2022-10-06 21:27:39 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:27:39 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:27:39 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:27:39 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@6749e575
+2022-10-06 21:27:39 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:27:40 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2b90@64f7161a
+2022-10-06 21:28:05 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@6749e575
+2022-10-06 21:28:05 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:28:05 ERROR MySQLUserDAOImpl:88 - Transaction fault
+2022-10-06 21:28:05 ERROR RegisterInspectorCommand:38 - User with email(a1@a1.a1) is already exist
+2022-10-06 21:28:05 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$224/0x0000000800ee2b90@64f7161a
+2022-10-06 21:28:37 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2d98@738b0024
+2022-10-06 21:28:39 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:28:39 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:28:39 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2d98@738b0024
+2022-10-06 21:28:48 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:28:48 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:28:48 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:28:48 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@2ad4c6ba
+2022-10-06 21:28:48 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:28:49 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2d98@738b0024
+2022-10-06 21:28:57 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@2ad4c6ba
+2022-10-06 21:28:57 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:28:58 ERROR MySQLUserDAOImpl:88 - Transaction fault
+2022-10-06 21:28:58 ERROR RegisterInspectorCommand:38 - User with email(a1@a1.a1) is already exist
+2022-10-06 21:28:58 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800ee2d98@738b0024
+2022-10-06 21:29:39 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@1e63aade
+2022-10-06 21:29:42 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:29:42 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:29:42 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@1e63aade
+2022-10-06 21:29:50 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:29:50 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:29:50 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:29:50 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@2ad4c6ba
+2022-10-06 21:29:50 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:29:50 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@1e63aade
+2022-10-06 21:29:59 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@2ad4c6ba
+2022-10-06 21:29:59 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:29:59 ERROR MySQLUserDAOImpl:88 - Transaction fault
+2022-10-06 21:29:59 ERROR RegisterInspectorCommand:38 - User with email(a1@a1.a1) is already exist
+2022-10-06 21:29:59 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edea68@1e63aade
+2022-10-06 21:32:21 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3d465313
+2022-10-06 21:32:39 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:32:39 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:32:39 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3d465313
+2022-10-06 21:32:52 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:32:52 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:32:52 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:32:52 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@76e5f42b
+2022-10-06 21:32:52 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:32:52 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3d465313
+2022-10-06 21:33:00 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@76e5f42b
+2022-10-06 21:33:00 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:33:01 INFO  RegisterInspectorCommand:35 - User has been registered: User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:33:01 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3d465313
+2022-10-06 21:33:12 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:33:12 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:33:12 INFO  LoginCommand:34 - Login process with data: a1@a1.a1, 123456
+2022-10-06 21:33:12 ERROR FrontControllerServlet:81 - Exception Index -1 out of bounds for length 2
+2022-10-06 21:33:12 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3d465313
+2022-10-06 21:36:27 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3cfd4eda
+2022-10-06 21:36:29 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:36:29 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:36:29 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3cfd4eda
+2022-10-06 21:36:36 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:36:36 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:36:36 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:36:36 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@34e47a4d
+2022-10-06 21:36:36 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:36:36 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3cfd4eda
+2022-10-06 21:36:43 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@34e47a4d
+2022-10-06 21:36:43 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:36:43 ERROR FrontControllerServlet:81 - Exception Cannot invoke "com.my.persistence.entity.EntrepreneurType.ordinal()" because the return value of "com.my.persistence.entity.User.getEntrepreneurType()" is null
+2022-10-06 21:36:43 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$223/0x0000000800ee2b90@3cfd4eda
+2022-10-06 21:37:30 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee2b90@20bdd142
+2022-10-06 21:37:32 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:37:32 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:37:32 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$222/0x0000000800ee2b90@20bdd142
+2022-10-06 21:38:36 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:38:38 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:38:38 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:38:39 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:38:45 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:38:45 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:38:45 INFO  LoginCommand:34 - Login process with data: inspector, register
+2022-10-06 21:38:45 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@76e5f42b
+2022-10-06 21:38:45 INFO  RegisterInspectorCommand:22 - Request to registration page
+2022-10-06 21:38:46 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:38:56 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.RegisterInspectorCommand@76e5f42b
+2022-10-06 21:38:56 INFO  RegisterInspectorCommand:31 - User entity has been created  User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=null, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:38:56 INFO  RegisterInspectorCommand:35 - User has been registered: User{id=null, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='null', lastName='null', dateOfRegistration=null, tin='null', address='null'}
+2022-10-06 21:38:56 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:39:01 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:39:01 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:39:01 INFO  LoginCommand:34 - Login process with data: a1@a1.a1, 123456
+2022-10-06 21:39:01 INFO  UserService:33 - Validation login data for input: a1@a1.a1, 123456
+2022-10-06 21:39:01 INFO  LoginCommand:44 - User logged in + User{id=5, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='null', lastName='null', dateOfRegistration=2022-10-06, tin='null', address='null'}
+2022-10-06 21:39:01 INFO  ParameterUserIdFilter:26 - 
+2022-10-06 21:39:01 DEBUG FrontControllerServlet:72 - Command: InspectorReportsCommand
+2022-10-06 21:39:01 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-10-06 21:39:01 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-10-06 21:39:01 INFO  InspectorService:43 - service working..
+2022-10-06 21:39:01 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:39:01 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:39:02 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:10 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.LogoutCommand@5975c1d4
+2022-10-06 21:40:10 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:12 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:40:12 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:40:12 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:26 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:40:26 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:40:26 INFO  LoginCommand:34 - Login process with data: u@u.u, 123456
+2022-10-06 21:40:26 INFO  UserService:33 - Validation login data for input: u@u.u, 123456
+2022-10-06 21:40:26 INFO  LoginCommand:44 - User logged in + User{id=2, email='u@u.u', password='123456', userRole=USER, type=PHYSICAL_PERSON, name='User', lastName='User', dateOfRegistration=2022-10-06, tin='00000001', address='Home'}
+2022-10-06 21:40:26 DEBUG FrontControllerServlet:72 - Command: UserReportsCommand
+2022-10-06 21:40:26 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-10-06 21:40:26 DEBUG UserReportsCommand:32 - user rep params  2, null, null, null, null
+2022-10-06 21:40:26 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:30 DEBUG FrontControllerServlet:72 - Command: UserReportApplyCommand
+2022-10-06 21:40:30 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:40 INFO  ReportFormFilter:34 - report: 2000, 1, , 2
+2022-10-06 21:40:40 DEBUG FrontControllerServlet:72 - Command: UserReportApplyCommand
+2022-10-06 21:40:40 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:51 INFO  ReportFormFilter:34 - report: 2000, 1, SECOND_PERIOD, 2001
+2022-10-06 21:40:51 INFO  ReportFormFilter:57 - ReportDTO{id=null, income=2000, taxRate=1, taxPeriod='SECOND_PERIOD', year=2001, reportDate=null, status='null', comment='null', userId=null, userDTO=null}
+2022-10-06 21:40:51 DEBUG FrontControllerServlet:72 - Command: UserReportApplyCommand
+2022-10-06 21:40:51 INFO  UserReportApplyCommand:41 - post apply
+2022-10-06 21:40:51 INFO  MySQLReportDAOImpl:67 - creating report
+2022-10-06 21:40:51 INFO  MySQLReportDAOImpl:68 - Report{id=null, userId=2, income=2000, taxPeriod=SECOND_PERIOD, taxRate=1, reportDate=2022-10-06, year=2001, status=PROCESSING, comment='null'}
+2022-10-06 21:40:51 INFO  MySQLReportDAOImpl:80 - com.mysql.cj.jdbc.ClientPreparedStatement: INSERT INTO report (comment, income, status_id, period_id, tax_rate, year, user_id) values (** BYTE ARRAY DATA **, 2000, 1, 2, 1, 2001, 2);
+2022-10-06 21:40:51 DEBUG FrontControllerServlet:72 - Command: UserReportsCommand
+2022-10-06 21:40:51 DEBUG UserReportsCommand:24 - /user/reports  GET
+2022-10-06 21:40:51 DEBUG UserReportsCommand:32 - user rep params  2, null, null, null, null
+2022-10-06 21:40:51 INFO  MySQLReportDAOImpl:306 - Report{id=1, userId=2, income=2000, taxPeriod=SECOND_PERIOD, taxRate=1, reportDate=2022-10-06, year=2001, status=PROCESSING, comment='null'}
+2022-10-06 21:40:51 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:40:58 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.command.app.LogoutCommand@5975c1d4
+2022-10-06 21:40:59 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:41:00 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:41:00 DEBUG LoginCommand:23 - Login request  /login  GET
+2022-10-06 21:41:00 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:41:04 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:41:04 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:41:04 INFO  LoginCommand:34 - Login process with data: a1@a1.a1, 12345
+2022-10-06 21:41:04 INFO  UserService:33 - Validation login data for input: a1@a1.a1, 12345
+2022-10-06 21:41:04 ERROR UserService:36 - Wrong password input for a1@a1.a1
+2022-10-06 21:41:04 ERROR LoginCommand:53 - Login exception
+2022-10-06 21:41:04 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142
+2022-10-06 21:41:08 DEBUG FrontControllerServlet:72 - Command: LoginCommand
+2022-10-06 21:41:08 DEBUG LoginCommand:23 - Login request  /login  POST
+2022-10-06 21:41:08 INFO  LoginCommand:34 - Login process with data: a1@a1.a1, 123456
+2022-10-06 21:41:08 INFO  UserService:33 - Validation login data for input: a1@a1.a1, 123456
+2022-10-06 21:41:08 INFO  LoginCommand:44 - User logged in + User{id=5, email='a1@a1.a1', password='123456', userRole=INSPECTOR, type=PHYSICAL_PERSON, name='null', lastName='null', dateOfRegistration=2022-10-06, tin='null', address='null'}
+2022-10-06 21:41:08 INFO  ParameterUserIdFilter:26 - 
+2022-10-06 21:41:08 DEBUG FrontControllerServlet:72 - Command: InspectorReportsCommand
+2022-10-06 21:41:08 DEBUG InspectorReportsCommand:25 - /inspector/reports
+2022-10-06 21:41:08 INFO  InspectorReportsCommand:26 - Request attributes: null, , null, null, null, null
+2022-10-06 21:41:08 INFO  InspectorService:43 - service working..
+2022-10-06 21:41:08 INFO  MySQLReportDAOImpl:203 - findByParamWithUser work
+2022-10-06 21:41:08 INFO  MySQLReportDAOImpl:241 - com.mysql.cj.jdbc.ClientPreparedStatement: SELECT rr.*, u.* FROM ( SELECT r.* FROM report r WHERE r.user_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.user_id, ** BYTE ARRAY DATA **))AND r.report_date = (IF(** BYTE ARRAY DATA ** IS NULL, r.report_date, ** BYTE ARRAY DATA **))AND r.period_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.period_id, ** BYTE ARRAY DATA **))AND r.status_id = (IF(** BYTE ARRAY DATA ** IS NULL, r.status_id, ** BYTE ARRAY DATA **))) rr LEFT JOIN user u ON rr.user_id = u.id ORDER BY r.id 
+2022-10-06 21:41:08 INFO  InspectorService:49 - service finished
+2022-10-06 21:41:08 DEBUG FrontControllerServlet:72 - Command: com.my.web.controller.FrontControllerServlet$$Lambda$221/0x0000000800edf8e0@20bdd142

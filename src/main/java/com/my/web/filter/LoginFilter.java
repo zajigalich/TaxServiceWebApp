@@ -20,9 +20,8 @@ public class LoginFilter implements Filter {
 
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        //log.debug("Login filter works");
+
         if (email == null || password == null) {
-            //log.debug("Login redirect");
             servletRequest.getRequestDispatcher("/login.jsp").forward(servletRequest, servletResponse);
         }
 

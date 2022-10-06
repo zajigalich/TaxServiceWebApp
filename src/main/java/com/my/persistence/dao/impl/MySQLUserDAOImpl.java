@@ -24,6 +24,10 @@ public class MySQLUserDAOImpl implements UserDAO {
             "(role_id, entrepreneur_type_id, name, lastname, email, password, tin, address ) " +
             "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 
+    /*private static final String CREATE_INSPECTOR = "INSERT INTO user " +
+            "(role_id, email, password ) " +
+            "VALUES (?, ?, ?);";
+*/
     private final static String FIND_BY_ID = "SELECT * FROM USER WHERE id = ?;";
 
     private final static String DELETE_BY_ID = "DELETE FROM user u WHERE u.id = ?";
@@ -67,6 +71,30 @@ public class MySQLUserDAOImpl implements UserDAO {
         }
         return false;
     }
+
+    /*@Override
+    public boolean createInspector(User user) {
+        try (Connection con = ManagerDB.getInstance().getConnection()) {
+            try (PreparedStatement statement = con.prepareStatement(CREATE_INSPECTOR)) {
+                int k = 0;
+                statement.setInt(++k, user.getUserRole().ordinal() + 1);
+                statement.setString(++k, user.getEmail());
+                statement.setString(++k, user.getPassword());
+                statement.execute();
+                con.commit();
+                return true;
+            } catch (SQLException e) {
+                log.error("Transaction fault");
+                con.rollback();
+                e.printStackTrace();
+                throw new UserAlreadyExistsException("User already exists");
+            }
+        } catch (SQLException e) {
+            log.error("Unable to get Connection");
+            e.printStackTrace();
+        }
+        return false;
+    }*/
 
     @Override
     public Optional<User> findById(Long id) {
