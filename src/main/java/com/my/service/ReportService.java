@@ -26,15 +26,7 @@ public class ReportService {
 
     private static final Logger log = Logger.getLogger(ReportService.class.getName());
 
-    private static ReportService reportService;
 
-    public static synchronized ReportService getInstance() {
-
-        if (reportService == null)
-            reportService = new ReportService();
-
-        return reportService;
-    }
 
     public List<ReportDTO> getReportsByFilterParam(Long id, Date reportDate, TaxPeriod period,
                                                 ReportStatus status, SortField sortField) {
@@ -43,7 +35,6 @@ public class ReportService {
 
         reportList = reportDAO.findByParam(id, reportDate, period, status, sortField);
 
-        //log.info(reportList.toString());
 
         if (reportList == null || reportList.isEmpty()) {
             throw new ReportsNotFoundException("No reports found");

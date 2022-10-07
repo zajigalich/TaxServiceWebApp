@@ -10,6 +10,7 @@ import com.my.service.UserService;
 import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -26,6 +27,10 @@ public class LoginCommand implements Command {
             return "/login";
         }
 
+        ServletContext servletContext = request.getServletContext();
+        UserService userService = (UserService) servletContext.getAttribute("userService");
+
+
         HttpSession session = request.getSession();
 
         String email = request.getParameter("email");
@@ -37,7 +42,7 @@ public class LoginCommand implements Command {
             return "redirect:/register";
         }
         try {
-            User user = UserService.getInstance().validateLoginData(email, password);
+            User user = userService.validateLoginData(email, password);
 
             session.setAttribute("user", user);
 

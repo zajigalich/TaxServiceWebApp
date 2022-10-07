@@ -26,15 +26,6 @@ public class InspectorService {
 
     private static final Logger log = Logger.getLogger(InspectorService.class);
 
-    private static InspectorService inspectorService;
-
-    public static synchronized InspectorService getInstance() {
-        if (inspectorService == null)
-            inspectorService = new InspectorService();
-
-        return inspectorService;
-    }
-
     public List<ReportDTO> getReportsByFilterParam(Long id, Date reportDate, TaxPeriod period,
                                                    ReportStatus status, SortField sortField) {
 

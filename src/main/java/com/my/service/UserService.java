@@ -18,15 +18,6 @@ public class UserService {
 
     private final static Logger log = Logger.getLogger(UserService.class);
 
-    private static UserService userService;
-
-    public static synchronized UserService getInstance() {
-        if (userService == null)
-            userService = new UserService();
-
-        return userService;
-    }
-
     public User validateLoginData(String email, String password)
             throws WrongPasswordException, UserNotFoundException {
 

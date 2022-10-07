@@ -13,7 +13,8 @@ public class RegistrationService {
 
     private static final UserDAO userDAO = DAOFactory.getUserDaoInstance();
 
-    public static boolean registerUser(User user) throws UserAlreadyExistsException {
+
+    public boolean registerUser(User user) throws UserAlreadyExistsException {
         if (userDAO.findByEmail(user.getEmail()).isPresent()) {
             log.error("User with email(" + user.getEmail() + ") is already exist");
             throw new UserAlreadyExistsException("User already exist for " + user.getEmail());
@@ -23,7 +24,7 @@ public class RegistrationService {
         }
     }
 
-    public static boolean registerInspector(User inspector) {
+    public boolean registerInspector(User inspector) {
         if (userDAO.findByEmail(inspector.getEmail()).isPresent()) {
             log.error("Inspector with email(" + inspector.getEmail() + ") is already exist");
             throw new UserAlreadyExistsException("Inspector already exist for " + inspector.getEmail());

@@ -7,12 +7,11 @@ import com.my.service.ReportService;
 import com.my.web.controller.command.Command;
 import com.my.web.dto.ReportDTO;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class InspectorReportViewCommand implements Command {
-    private final ReportService reportService = ReportService.getInstance();
-    private final InspectorService inspectorService = InspectorService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
@@ -26,6 +25,10 @@ public class InspectorReportViewCommand implements Command {
     }
 
     private String processPostMethod(HttpServletRequest request) {
+
+        ServletContext servletContext = request.getServletContext();
+        InspectorService inspectorService = (InspectorService) servletContext.getAttribute("inspectorService");
+
 
         String status = request.getParameter("status");
         String comment = request.getParameter("comment");
@@ -42,6 +45,10 @@ public class InspectorReportViewCommand implements Command {
     }
 
     public String processGetMethod(HttpServletRequest request) {
+
+        ServletContext servletContext = request.getServletContext();
+        ReportService reportService = (ReportService) servletContext.getAttribute("reportService");
+
 
         try {
             Long reportId = Long.parseLong(request.getParameter("reportId"));

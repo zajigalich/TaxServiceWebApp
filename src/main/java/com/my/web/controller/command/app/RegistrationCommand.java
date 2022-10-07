@@ -4,10 +4,12 @@ import com.my.exception.UserAlreadyExistsException;
 import com.my.persistence.entity.EntrepreneurType;
 import com.my.persistence.entity.User;
 import com.my.persistence.entity.UserRole;
+import com.my.service.InspectorService;
 import com.my.service.RegistrationService;
 import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -25,6 +27,10 @@ public class RegistrationCommand implements Command {
             return "/registration";
         }
 
+        ServletContext servletContext = request.getServletContext();
+        RegistrationService registrationService = (RegistrationService) servletContext.getAttribute("registrationService");
+
+
         User user = User.builder()
                 .name(request.getParameter("firstName"))
                 .userRole(UserRole.USER)
@@ -38,7 +44,7 @@ public class RegistrationCommand implements Command {
         log.info("User entity has been created  " + user);
         try {
 
-            RegistrationService.registerUser(user);
+            registrationService.registerUser(user);
             log.info("User has been registered: " + user);
 
         } catch (UserAlreadyExistsException e) {

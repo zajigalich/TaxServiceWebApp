@@ -9,19 +9,23 @@ import com.my.web.dto.SortField;
 import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 
 public class UserReportsCommand implements Command {
 
-    private final ReportService reportService = ReportService.getInstance();
 
     private static final Logger log = Logger.getLogger(UserReportsCommand.class);
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         log.debug(request.getRequestURI() + "  " + request.getMethod());
+
+        ServletContext servletContext = request.getServletContext();
+        ReportService reportService = (ReportService) servletContext.getAttribute("reportService");
+
 
         Long id = ((User) request.getSession().getAttribute("user")).getId();
         Date date = (Date) request.getAttribute("date");

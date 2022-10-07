@@ -16,7 +16,7 @@
     <div class="form-group row">
         <div class="col-md-5">
             <form style="display: inline;" action="login" method="get">
-                <button type="submit"  class="btn btn-primary">
+                <button type="submit" class="btn btn-primary">
                     <fmt:message key="main.login"/>
                 </button>
             </form>
@@ -41,8 +41,15 @@
         </div>
     </div>
 </nav>
+
 <div style="text-align: center;">
-    <p><fmt:message key="main.greeting"/></p>
+    </br>
+    </br>
+    </br>
+    </br>
+    </br>
+    <p><font size="+5"><fmt:message key="main.greeting"/></font></p>
 </div>
+
 </body>
 </html>

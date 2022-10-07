@@ -9,18 +9,20 @@ import com.my.web.controller.command.Command;
 import com.my.web.dto.SortField;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.Date;
 
 public class InspectorReportsCommand implements Command {
 
-    private final InspectorService inspectorService = InspectorService.getInstance();
-
     private static final Logger log = Logger.getLogger(InspectorReportsCommand.class.getName());
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
+
+        ServletContext servletContext = request.getServletContext();
+        InspectorService inspectorService = (InspectorService) servletContext.getAttribute("inspectorService");
 
         log.debug(request.getRequestURI());
         log.info("Request attributes: " + request.getAttribute("userId") + ", "

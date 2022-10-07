@@ -40,7 +40,6 @@ public class EntityDTOUtil {
                 .reportDate(report.getReportDate())
                 .comment(report.getComment())
                 .userId(report.getUserId())
-                //.user(convertUserEntityToDto(report.getUser()))
                 .build();
     }
 

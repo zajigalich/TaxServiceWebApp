@@ -6,13 +6,12 @@ import com.my.web.controller.command.Command;
 import com.my.web.dto.ReportDTO;
 import com.my.web.dto.ReportFormError;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class UserReportEditCommand implements Command {
-
-    private final ReportService reportService = ReportService.getInstance();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
@@ -26,6 +25,10 @@ public class UserReportEditCommand implements Command {
 
     private String processGetRequest(HttpServletRequest request) {
 
+        ServletContext servletContext = request.getServletContext();
+        ReportService reportService = (ReportService) servletContext.getAttribute("reportService");
+
+
         Long reportId = Long.valueOf(request.getParameter("reportId"));
         ReportDTO reportById = reportService.getReportById(reportId);
 
@@ -35,6 +38,10 @@ public class UserReportEditCommand implements Command {
     }
 
     private String processPostRequest(HttpServletRequest request) {
+
+        ServletContext servletContext = request.getServletContext();
+        ReportService reportService = (ReportService) servletContext.getAttribute("reportService");
+
 
         ReportFormError formError = (ReportFormError) request.getAttribute("errorReportFormDTO");
 

@@ -6,6 +6,7 @@ import com.my.web.controller.command.Command;
 import com.my.web.dto.ReportDTO;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -15,12 +16,14 @@ public class UserReportSaveJsonCommand implements Command {
 
     private static final Logger log = Logger.getLogger(UserReportSaveJsonCommand.class);
 
-    private final ReportService reportService = ReportService.getInstance();
-
     private final Gson gson = new Gson();
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
+
+        ServletContext servletContext = request.getServletContext();
+        ReportService reportService = (ReportService) servletContext.getAttribute("reportService");
+
 
         ReportDTO report = reportService.getReportById(Long.parseLong(request.getParameter("reportId")));
         report.getUserDTO().setPassword("********");

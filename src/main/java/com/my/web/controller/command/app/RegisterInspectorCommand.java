@@ -8,6 +8,7 @@ import com.my.service.RegistrationService;
 import com.my.web.controller.command.Command;
 import org.apache.log4j.Logger;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -17,6 +18,10 @@ public class RegisterInspectorCommand implements Command {
 
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
+
+        ServletContext servletContext = request.getServletContext();
+        RegistrationService registrationService = (RegistrationService) servletContext.getAttribute("registrationService");
+
 
         if (request.getMethod().equalsIgnoreCase("get")) {
             log.info("Request to registration page");
@@ -31,7 +36,7 @@ public class RegisterInspectorCommand implements Command {
         log.info("User entity has been created  " + inspector);
         try {
 
-            RegistrationService.registerInspector(inspector);
+            registrationService.registerInspector(inspector);
             log.info("User has been registered: " + inspector);
 
         } catch (UserAlreadyExistsException e) {
