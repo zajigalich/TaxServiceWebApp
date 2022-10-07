@@ -48,30 +48,7 @@
                         <h1><fmt:message key="registration.registration"/></h1>
                     </div>
 
-                  <%--  <div class="form-group">
-                        <label for="entrepreneur"><fmt:message key="registration.data.entrepreneur"/></label>
-                        <select id="entrepreneur" name="entrepreneur">
-                            <option value="PHYSICAL_PERSON">
-                                <fmt:message key="user.data.entrepreneur.name.PHYSICAL_PERSON"/>
-                            </option>
-                            <option value="JURIDICAL_PERSON">
-                                <fmt:message key="user.data.entrepreneur.name.JURIDICAL_PERSON"/>
-                            </option>
-                        </select>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="firstName"><fmt:message key="registration.data.firstName"/> </label>
-                        <input id="firstName" name="firstName" type="text" class="form-control"
-                               placeholder="<fmt:message key="registration.data.input.firstName"/>">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="lastName"><fmt:message key="registration.data.lastName"/> </label>
-                        <input id="lastName" name="lastName" type="text" class="form-control"
-                               placeholder="<fmt:message key="registration.data.input.lastName"/>">
-                    </div>
---%>
                     <div class="form-group">
                         <label for="email"><fmt:message key="registration.data.email"/> </label>
                         <input id="email" name="email" type="text" class="form-control"
@@ -84,19 +61,7 @@
                                placeholder="<fmt:message key="registration.data.input.password"/>">
                     </div>
 
-                    <%--<div class="form-group">
-                        <label for="tin"><fmt:message key="registration.data.tin"/> </label>
-                        <input id="tin" name="tin" type="text" class="form-control"
-                               placeholder="<fmt:message key="registration.data.input.tin"/>">
-                    </div>
 
-
-                    <div class="form-group">
-                        <label for="address"><fmt:message key="registration.data.address"/> </label>
-                        <input id="address" name="address" type="text" class="form-control"
-                               placeholder="<fmt:message key="registration.data.input.address"/>">
-                    </div>
---%>
                     <div class="col text-center">
                         <button type="submit" style="width: 200px"
                                 class="btn btn-primary btn-lg">

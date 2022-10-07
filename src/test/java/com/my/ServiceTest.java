@@ -11,16 +11,13 @@ import com.my.persistence.entity.UserRole;
 import com.my.service.RegistrationService;
 import com.my.service.UserService;
 import com.my.web.EntityDTOUtil;
-import com.my.web.dto.UserDTO;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.function.Consumer;
 
 public class ServiceTest {
 
@@ -48,10 +45,15 @@ public class ServiceTest {
 
         users.add(testInspector);
 
-        Assert.assertTrue(RegistrationService.registerUser(testUser));
-        Assert.assertThrows(UserAlreadyExistsException.class, () -> RegistrationService.registerUser(testUser));
+        Assert.assertTrue(RegistrationService.getInstance().registerUser(testUser));
+
+        Assert.assertThrows(UserAlreadyExistsException.class,
+                () -> RegistrationService.getInstance().registerUser(testUser));
+
         Assert.assertTrue(RegistrationService.registerInspector(testInspector));
-        Assert.assertThrows(UserAlreadyExistsException.class, () -> RegistrationService.registerInspector(testUser));
+
+        Assert.assertThrows(UserAlreadyExistsException.class,
+                () -> RegistrationService.registerInspector(testUser));
 
         users.forEach(this::deleteUser);
     }
@@ -71,7 +73,7 @@ public class ServiceTest {
                 .tin("00000000")
                 .build();
 
-        RegistrationService.registerUser(testUser);
+        RegistrationService.getInstance().registerUser(testUser);
 
         Assert.assertTrue(compareUsers(testUser,
                 userService.validateLoginData(testUser.getEmail(), testUser.getPassword())));
@@ -106,10 +108,6 @@ public class ServiceTest {
         });
         return isEqual.get();
     }
-
-    /*private boolean compareUserEntityAndDTO(User userEntity, UserDTO userDTO){
-
-    }*/
 
     private void deleteUser(User user) {
         UserDAO userDAO = DAOFactory.getUserDaoInstance();

@@ -38,7 +38,7 @@ public class RegistrationCommand implements Command {
         log.info("User entity has been created  " + user);
         try {
 
-            RegistrationService.registerUser(user);
+            RegistrationService.getInstance().registerUser(user);
             log.info("User has been registered: " + user);
 
         } catch (UserAlreadyExistsException e) {
